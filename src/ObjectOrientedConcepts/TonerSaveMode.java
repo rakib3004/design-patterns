@@ -8,6 +8,15 @@ public class TonerSaveMode extends PrintMode {
     @Override
     void saveToner() {
 
+        if(tonerSavingLevel=="High"){
+
+        }
+        else if(tonerSavingLevel=="Medium"){
+
+        }
+        else{
+
+        }
     }
 
     @Override

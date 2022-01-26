@@ -2,7 +2,7 @@ package ObjectOrientedConcepts;
 
 public class BoosterMode extends PrintMode {
 
-    public double intensityThreshold;
+    private double intensityThreshold;
 
     @Override
     void saveToner() {

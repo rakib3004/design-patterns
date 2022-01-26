@@ -1,11 +1,11 @@
 package ObjectOrientedConcepts;
 
 public class PrintJob {
-public void pullJob(){
+        public void pullJob(){
 
-}
+        }
 
-public void changePriority(){
+        public void changePriority(){
 
-}
+        }
 }
