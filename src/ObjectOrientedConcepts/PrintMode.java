@@ -23,5 +23,21 @@ abstract class PrintMode {
 
     }*/
 
+    public  void saveToner(){
+
+
+
+    }
+
+    public  void savePage(){
+
+    }
+
+    public void boost(){
+
+    }
+
+
+
 
 }
