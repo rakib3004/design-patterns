@@ -51,18 +51,11 @@ abstract class PrintMode {
 
 
 
-    abstract   void saveToner(){
+    abstract   void saveToner();
 
-    }
+    abstract  void savePage();
 
-    abstract  void savePage(){
-
-    }
-
-    abstract void boost(){
-
-    }
-
+    abstract void boost();
 
 
 
