@@ -1,4 +1,4 @@
 package ObjectOrientedConcepts;
 
-public class BoosterMode {
+public class BoosterMode extends PrintMode {
 }

@@ -1,4 +1,4 @@
 package ObjectOrientedConcepts;
 
-public class TonerSaveMode {
+public class TonerSaveMode extends PrintMode {
 }

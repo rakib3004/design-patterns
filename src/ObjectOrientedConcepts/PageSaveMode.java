@@ -1,4 +1,4 @@
 package ObjectOrientedConcepts;
 
-public class PageSaveMode {
+public class PageSaveMode extends PrintMode {
 }
