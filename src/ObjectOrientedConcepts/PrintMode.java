@@ -68,11 +68,11 @@ abstract class PrintMode {
 class PageSize{
 
     private double pageHeight;
-    private double pageWeight;
+    private double pageWidth;
 
-    public PageSize(double pageHeight, double pageWeight) {
+    public PageSize(double pageHeight, double pageWidth) {
         this.pageHeight = pageHeight;
-        this.pageWeight = pageWeight;
+        this.pageWidth = pageWidth;
     }
 
     public double getPageHeight() {
@@ -83,11 +83,11 @@ class PageSize{
         this.pageHeight = pageHeight;
     }
 
-    public double getPageWeight() {
-        return pageWeight;
+    public double getPageWidth() {
+        return pageWidth;
     }
 
-    public void setPageWeight(double pageWeight) {
-        this.pageWeight = pageWeight;
+    public void setPageWidth(double pageWidth) {
+        this.pageWidth = pageWidth;
     }
 }

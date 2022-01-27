@@ -32,6 +32,17 @@ public class TonerSaveMode extends PrintMode {
         }
     }
 
+
+    void adjustPage(){
+
+        if(pageSize.getPageHeight()>pageSize.getPageWidth()){
+            orientation="legal";
+        }
+        else{
+            orientation="portrait";
+        }
+    }
+
     @Override
     void savePage() {
 

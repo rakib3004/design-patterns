@@ -2,7 +2,7 @@ package ObjectOrientedConcepts;
 
 public class BoosterMode extends PrintMode {
 
-    private double intensityThreshold;
+    private double intensityThreshold=0.75;
 
     public BoosterMode(int numberOfPages, PageSize pageSize, String orientation, double colorIntensity, double costPerPage) {
         super(numberOfPages,pageSize,orientation,colorIntensity,costPerPage);
@@ -20,6 +20,7 @@ public class BoosterMode extends PrintMode {
 
     @Override
     void boost() {
+        colorIntensity=intensityThreshold;
 
     }
 }
