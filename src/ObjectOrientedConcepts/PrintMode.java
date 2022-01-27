@@ -54,7 +54,19 @@ abstract class PrintMode {
         }
 
 
+        /*
+        *This class abstract only those three class whose are
+        *  essential for its' children class and it does not  force to implement
+        * an interface that it does’t use it's client class
+        *So it follows [Interface Segregation Principle]
 
+         */
+
+            /*
+            *This PrintMode class is independent because this never dependent on any class
+            *On the other hand Its' children depend on this class
+            * So, it follows [Dependency Inversion Principle]
+             */
         abstract   void saveToner();
 
         abstract  void savePage();

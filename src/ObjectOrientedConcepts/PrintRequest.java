@@ -5,5 +5,4 @@ public class PrintRequest {
     PageSaveMode pageSaveMode;
     BoosterMode boosterMode;
 
-
 }

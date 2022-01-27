@@ -8,17 +8,27 @@ public class TonerSaveMode extends PrintMode {
     }
 
 
+    /*
+     *There is a toner saving level, color intensity algorithm where it show that
+     * If toner saving level is high then color intensity is 1/3rd
+     * If toner saving level is medium then color intensity is 2/3rd
+     * If toner saving level is high then color intensity is full
+     * We will assume the toner saving level is between 0 to 1
+     */
+
+    /*
+     *[Liskov Substitution Principle]
+     *  This class extend 'PrintMode' but if 'PrintMode' does not exists
+     * This is independently executes without any problem
+     * because this class already have all essential attributes and methods
+     * so its follow   *Liskov Substitution Principle*
+     */
+
 
     @Override
     void saveToner() {
 
-        /*
-        *There is a toner saving level, color intensity algorithm where it show that
-        * If toner saving level is high then color intensity is 1/3rd
-        * If toner saving level is medium then color intensity is 2/3rd
-        * If toner saving level is high then color intensity is full
-        * We will assume the toner saving level is between 0 to 1
-        */
+
 
 
         if(tonerSavingLevel=="high"){
@@ -33,9 +43,14 @@ public class TonerSaveMode extends PrintMode {
     }
 
 
+
+    /*
+    *   If page height is less than page width then this page orientation is legal
+    *  If page height is greater than page width then this page orientation is legal
+    */
     void adjustPage(){
 
-        if(pageSize.getPageHeight()>pageSize.getPageWidth()){
+        if(pageSize.getPageHeight()<pageSize.getPageWidth()){
             orientation="legal";
         }
         else{
