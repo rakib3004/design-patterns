@@ -3,13 +3,17 @@ package ObjectOrientedConcepts;
 abstract class PrintMode {
 
 
-        private int numberOfPages;
-        private int pageSize;
-        private String orientation;
-        private double colorIntensity;
-        private double costPerPage;
+        public int numberOfPages;
+        public PageSize pageSize;
+         public String orientation;
+       public double colorIntensity;
+        public double costPerPage;
 
-        public int getNumberOfPages() {
+    public PrintMode(int numberOfPages, PageSize pageSize, String orientation, double colorIntensity, double costPerPage) {
+
+    }
+
+    public int getNumberOfPages() {
             return numberOfPages;
         }
 
@@ -17,11 +21,11 @@ abstract class PrintMode {
             this.numberOfPages = numberOfPages;
         }
 
-        public int getPageSize() {
+        public PageSize getPageSize() {
             return pageSize;
         }
 
-        public void setPageSize(int pageSize) {
+        public void setPageSize(PageSize pageSize) {
             this.pageSize = pageSize;
         }
 
@@ -59,4 +63,31 @@ abstract class PrintMode {
 
 
 
+}
+
+class PageSize{
+
+    private double pageHeight;
+    private double pageWeight;
+
+    public PageSize(double pageHeight, double pageWeight) {
+        this.pageHeight = pageHeight;
+        this.pageWeight = pageWeight;
+    }
+
+    public double getPageHeight() {
+        return pageHeight;
+    }
+
+    public void setPageHeight(double pageHeight) {
+        this.pageHeight = pageHeight;
+    }
+
+    public double getPageWeight() {
+        return pageWeight;
+    }
+
+    public void setPageWeight(double pageWeight) {
+        this.pageWeight = pageWeight;
+    }
 }
