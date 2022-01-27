@@ -28,6 +28,11 @@ public class TonerSaveMode extends PrintMode {
     @Override
     void saveToner() {
 
+        /*
+        *It follows [O]pen Closed Principle] because it's never modify the parent class module
+        * But it can extend[override] parent class module for better purpose
+         */
+
 
 
 

@@ -37,6 +37,10 @@ public class BoosterMode extends PrintMode {
 
     @Override
     void boost() {
+        /*
+         *It follows [O]pen Closed Principle] because it's never modify the parent class module
+         * But it can extend[override] parent class module for better purpose
+         */
         colorIntensity=intensityThreshold;
         System.out.println("Set Color Intensity according to Intensity Threshold");
 

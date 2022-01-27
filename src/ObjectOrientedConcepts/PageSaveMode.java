@@ -22,13 +22,14 @@ public class PageSaveMode extends PrintMode {
 
 
 
-    public void renderPreview(){
-        System.out.println("Preview the Documents");
-    }
-
     @Override
     void saveToner() {
-
+        /*
+         *It follows [O]pen Closed Principle] because it's never modify the parent class module
+         * But it can extend[override] parent class module for better purpose
+         */
+        System.out.println("Save Toner Successfully done!");
+        renderPreview();
     }
 
     @Override
@@ -40,4 +41,10 @@ public class PageSaveMode extends PrintMode {
     void boost() {
 
     }
+
+
+    public void renderPreview(){
+        System.out.println("Preview the Documents");
+    }
+
 }
