@@ -2,11 +2,13 @@ package ObjectOrientedConcepts;
 
 public class PrintJob {
         PrioritySettings prioritySettings;
+        PullJob pullJob;
+
         public void pullJob(){
-        prioritySettings.pullJob();
+        prioritySettings.changePriority();
         }
 
         public void changePriority(){
-        prioritySettings.changePriority();
+        pullJob.pullJob();
         }
 }

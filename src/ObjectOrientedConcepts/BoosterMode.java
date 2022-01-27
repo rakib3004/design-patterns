@@ -18,9 +18,12 @@ public class BoosterMode extends PrintMode {
 
     }
 
+
+
     @Override
     void boost() {
         colorIntensity=intensityThreshold;
+        System.out.println("Set Color Intensity according to Intensity Threshold");
 
     }
 }

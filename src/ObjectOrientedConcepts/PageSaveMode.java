@@ -10,7 +10,7 @@ public class PageSaveMode extends PrintMode {
 
 
     public void renderPreview(){
-
+        System.out.println("Preview the Documents");
     }
 
     @Override
