@@ -8,9 +8,6 @@ public class PageSaveMode extends PrintMode {
        super(numberOfPages,pageSize,orientation,colorIntensity,costPerPage);
     }
 
-    /* This follow [Single-Responsibility Principle]
-     * because this class works on only on responsibility
-     */
 
     /*
      *[Liskov Substitution Principle]

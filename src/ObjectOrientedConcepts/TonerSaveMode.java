@@ -24,6 +24,12 @@ public class TonerSaveMode extends PrintMode {
      * so its follow   *Liskov Substitution Principle*
      */
 
+    TonerSavingLevel tonerSavingLevel1;
+
+    public void getColorIntensity(){
+        tonerSavingLevel1.getColorIntensity();
+    }
+
 
     @Override
     void saveToner() {
@@ -34,17 +40,14 @@ public class TonerSaveMode extends PrintMode {
          */
 
 
+        /*
+        *Imple
+         */
 
 
-        if(tonerSavingLevel=="high"){
-            colorIntensity=.33;
-        }
-        else if(tonerSavingLevel=="medium"){
-            colorIntensity=.67;
-        }
-        else{
-            colorIntensity=.33;
-        }
+
+
+
     }
 
 

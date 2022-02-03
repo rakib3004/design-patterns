@@ -37,7 +37,7 @@ abstract class PrintMode {
             this.orientation = orientation;
         }
 
-        public double getColorIntensity() {
+        public void getColorIntensity() {
             return colorIntensity;
         }
 
