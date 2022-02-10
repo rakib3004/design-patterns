@@ -64,6 +64,8 @@ abstract class PrintMode {
             *On the other hand Its' children depend on this class
             * So, it follows [Dependency Inversion Principle]
              */
+
+
         abstract   void saveToner();
 
         abstract  void savePage();
