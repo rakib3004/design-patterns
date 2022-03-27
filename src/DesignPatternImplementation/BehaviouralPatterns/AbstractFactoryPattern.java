@@ -25,7 +25,7 @@ public class AbstractFactoryPattern {
 
             }
             else{
-                System.out.println("Please Enter (UFO/ Rocket/ BossUFO) again on next time! ");
+                System.out.println("Please Enter (UFO/ Rocket/ Big UFO) again on next time! ");
             }
         }
 

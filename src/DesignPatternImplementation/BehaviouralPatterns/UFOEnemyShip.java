@@ -1,4 +1,5 @@
 package DesignPatternImplementation.BehaviouralPatterns;
 
-public class UFOEnemyShip {
+public class UFOEnemyShip extends EnemyShip{
+
 }
