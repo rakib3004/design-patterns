@@ -20,8 +20,21 @@ public class AbstractFactoryPattern {
 
             theEnemy=shipFactory.makeEnemyShip(shipType);
 
+            if(theEnemy!=null){
+                doStuffEnemy(theEnemy);
 
+            }
+            else{
+                System.out.println("Please Enter (UFO/ Rocket/ BossUFO) again on next time! ");
+            }
         }
 
+    }
+
+    public static void doStuffEnemy(EnemyShip theEnemy){
+
+
+        System.out.println("Do Stuff Enemy "+theEnemy);
+        return;
     }
 }
