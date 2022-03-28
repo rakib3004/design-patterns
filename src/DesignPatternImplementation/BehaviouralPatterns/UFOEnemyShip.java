@@ -1,9 +1,27 @@
 package DesignPatternImplementation.BehaviouralPatterns;
 
 public class UFOEnemyShip extends EnemyShip{
-    public UFOEnemyShip() {
-        setName("UFO Enemy Ship");
-        setDamage(20.0);
-        setSpeed(20.0);
-    }
+	
+	
+	EnemyShipFactory shipFactory;
+	
+	
+	public UFOEnemyShip(EnemyShipFactory shipFactory){
+		
+		this.shipFactory = shipFactory;
+		
+	}
+
+	
+	void makeShip() {
+		
+		System.out.println("Making enemy ship " + getName());
+		
+		
+		
+		weapon = shipFactory.addESGun();
+		engine = shipFactory.addESEngine();
+		
+	}
+	
 }
