@@ -11,12 +11,17 @@ public class AnimalPlay{
 		System.out.println("Dog: " + doggy.tryToFly());
 		
 		System.out.println("Bird: " + eagle.tryToFly());
-		
-		
-		sparky.setFlyingAbility(new ItFlys());
-		
+
+
+		doggy.setFlyingAbility(new ItFlys());
+		eagle.setFlyingAbility(new ItFlys());
+
+		System.out.println("After Ability Change: ");
 		System.out.println("Dog: " + doggy.tryToFly());
-		
+
+		System.out.println("Bird: " + eagle.tryToFly());
+
+
 	}
 	
 }
