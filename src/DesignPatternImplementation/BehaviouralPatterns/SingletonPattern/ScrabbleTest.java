@@ -1,3 +1,5 @@
+package DesignPatternImplementation.BehaviouralPatterns.SingletonPattern;
+
 import java.util.LinkedList;
 
 public class ScrabbleTest {
