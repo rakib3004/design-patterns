@@ -1,4 +1,4 @@
-package DesignPatternImplementation.BehaviouralPatterns;
+package DesignPatternImplementation.BehaviouralPatterns.AbstractFactoryPatten;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package DesignPatternImplementation.BehaviouralPatterns;
+package DesignPatternImplementation.BehaviouralPatterns.AbstractFactoryPatten;
 
 public class ESUFOBossGun implements ESWeapon{
 	
