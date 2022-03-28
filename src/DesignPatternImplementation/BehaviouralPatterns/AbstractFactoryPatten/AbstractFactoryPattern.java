@@ -4,10 +4,8 @@ import java.util.Scanner;
 
 public class AbstractFactoryPattern {
     public static void main(String[] args) {
-        // create factory object
         EnemyShipFactory shipFactory = new EnemyShipFactory();
 
-        // enemy ship object
 
         EnemyShip theEnemy = null;
 
