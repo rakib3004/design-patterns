@@ -1,6 +1,8 @@
 package DesignPatternImplementation.BehaviouralPatterns.SingletonPattern;
 
 
+package DesignPatternImplementation.BehaviouralPatterns.SingletonPattern;
+
 import java.util.LinkedList;
 
 public class GetTheTiles implements Runnable {

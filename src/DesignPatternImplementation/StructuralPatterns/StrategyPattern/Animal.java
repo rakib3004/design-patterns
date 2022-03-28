@@ -1,4 +1,4 @@
-package DesignPatternImplementation.StructuralPatterns;
+package DesignPatternImplementation.StructuralPatterns.StrategyPattern;
 
 public class Animal {
 	

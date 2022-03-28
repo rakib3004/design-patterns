@@ -1,3 +1,5 @@
+package DesignPatternImplementation.StructuralPatterns.StrategyPattern;
+
 public class Dog extends Animal{
 	
 	public void digHole(){

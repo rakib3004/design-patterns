@@ -1,3 +1,6 @@
+package DesignPatternImplementation.StructuralPatterns.StrategyPattern;
+
+
 public class Bird extends Animal{
 	
 	

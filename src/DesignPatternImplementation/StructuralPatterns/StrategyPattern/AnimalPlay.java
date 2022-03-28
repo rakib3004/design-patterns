@@ -1,3 +1,6 @@
+package DesignPatternImplementation.StructuralPatterns.StrategyPattern;
+
+
 public class AnimalPlay{
 	
 	public static void main(String[] args){
