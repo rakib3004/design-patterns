@@ -2,17 +2,17 @@ package ObjectOrientedConcepts;
 
 public class PrioritySettings {
 
-    public void changePriority(){
+    public void changePriority() {
         System.out.println("Change Priority");
 
     }
 
 }
 
- class PullJob{
+class PullJob {
 
-     public void pullJob(){
-         System.out.println("Pull Job");
-     }
+    public void pullJob() {
+        System.out.println("Pull Job");
+    }
 
- }
+}

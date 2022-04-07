@@ -3,13 +3,14 @@ package ObjectOrientedConcepts;
 public class TonerSaveMode extends PrintMode {
 
     public String tonerSavingLevel;
-    public TonerSaveMode(int numberOfPages, PageSize pageSize, String orientation, double colorIntensity, double costPerPage) {
-        super(numberOfPages,pageSize,orientation,colorIntensity,costPerPage);
+
+    public TonerSaveMode(int numberOfPages, PageSize pageSize, String orientation, double colorIntensity,
+            double costPerPage) {
+        super(numberOfPages, pageSize, orientation, colorIntensity, costPerPage);
     }
 
-
     /*
-     *There is a toner saving level, color intensity algorithm where it show that
+     * There is a toner saving level, color intensity algorithm where it show that
      * If toner saving level is high then color intensity is 1/3rd
      * If toner saving level is medium then color intensity is 2/3rd
      * If toner saving level is high then color intensity is full
@@ -17,52 +18,44 @@ public class TonerSaveMode extends PrintMode {
      */
 
     /*
-     *[Liskov Substitution Principle]
-     *  This class extend 'PrintMode' but if 'PrintMode' does not exists
+     * [Liskov Substitution Principle]
+     * This class extend 'PrintMode' but if 'PrintMode' does not exists
      * This is independently executes without any problem
      * because this class already have all essential attributes and methods
-     * so its follow   *Liskov Substitution Principle*
+     * so its follow *Liskov Substitution Principle*
      */
 
     TonerSavingLevel tonerSavingLevel1;
 
-    public void getColorIntensity(){
+    public void getColorIntensity() {
         tonerSavingLevel1.getColorIntensity();
     }
-
 
     @Override
     void saveToner() {
 
         /*
-        *It follows [O]pen Closed Principle] because it's never modify the parent class module
-        * But it can extend[override] parent class module for better purpose
+         * It follows [O]pen Closed Principle] because it's never modify the parent
+         * class module
+         * But it can extend[override] parent class module for better purpose
          */
-
 
         /*
-        *Imple
+         * Imple
          */
-
-
-
-
 
     }
 
-
-
     /*
-    *   If page height is less than page width then this page orientation is legal
-    *  If page height is greater than page width then this page orientation is legal
-    */
-    void adjustPage(){
+     * If page height is less than page width then this page orientation is legal
+     * If page height is greater than page width then this page orientation is legal
+     */
+    void adjustPage() {
 
-        if(pageSize.getPageHeight()<pageSize.getPageWidth()){
-            orientation="legal";
-        }
-        else{
-            orientation="portrait";
+        if (pageSize.getPageHeight() < pageSize.getPageWidth()) {
+            orientation = "legal";
+        } else {
+            orientation = "portrait";
         }
     }
 
