@@ -9,17 +9,21 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
     private String _title;
     private int _priceCode;
+
     public Movie(String title, int priceCode) {
         _title = title;
         _priceCode = priceCode;
     }
+
     public int getPriceCode() {
         return _priceCode;
     }
+
     public void setPriceCode(int arg) {
         _priceCode = arg;
     }
-    public String getTitle (){
+
+    public String getTitle() {
         return _title;
     };
 }
@@ -27,13 +31,16 @@ public class Movie {
 class Rental {
     private Movie _movie;
     private int _daysRented;
+
     public Rental(Movie movie, int daysRented) {
         _movie = movie;
         _daysRented = daysRented;
     }
+
     public int getDaysRented() {
         return _daysRented;
     }
+
     public Movie getMovie() {
         return _movie;
     }
@@ -67,7 +74,7 @@ class Customer {
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
-            //determine amounts for each line
+            // determine amounts for each line
             switch (each.getMovie().getPriceCode()) {
                 case Movie.REGULAR:
                     thisAmount += 2;
@@ -88,13 +95,14 @@ class Customer {
             // add bonus for a two day new release rental
             if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE)
                     &&
-                    each.getDaysRented() > 1) frequentRenterPoints++;
-            //show figures for this rental
+                    each.getDaysRented() > 1)
+                frequentRenterPoints++;
+            // show figures for this rental
             result += "\t" + each.getMovie().getTitle() + "\t" +
                     String.valueOf(thisAmount) + "\n";
             totalAmount += thisAmount;
         }
-        //add footer lines
+        // add footer lines
         result += "Amount owed is " + String.valueOf(totalAmount) +
                 "\n";
         result += "You earned " + String.valueOf(frequentRenterPoints)

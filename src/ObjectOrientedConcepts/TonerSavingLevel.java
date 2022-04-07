@@ -1,11 +1,11 @@
 package ObjectOrientedConcepts;
 
 public interface TonerSavingLevel {
-     double getColorIntensity();
+    double getColorIntensity();
 
 }
 
-class HighTonerSavingLevel implements TonerSavingLevel{
+class HighTonerSavingLevel implements TonerSavingLevel {
 
     @Override
     public double getColorIntensity() {
@@ -13,14 +13,15 @@ class HighTonerSavingLevel implements TonerSavingLevel{
     }
 }
 
-class MediumTonerSavingLevel implements TonerSavingLevel{
+class MediumTonerSavingLevel implements TonerSavingLevel {
 
     @Override
     public double getColorIntensity() {
         return 0.66;
     }
 }
-class LowTonerSavingLevel implements TonerSavingLevel{
+
+class LowTonerSavingLevel implements TonerSavingLevel {
 
     @Override
     public double getColorIntensity() {
