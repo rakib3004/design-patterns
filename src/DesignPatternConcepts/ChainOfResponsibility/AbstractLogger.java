@@ -7,7 +7,6 @@ public abstract class AbstractLogger {
 
     protected int level;
 
-    //next element in chain or responsibility
     protected AbstractLogger nextLogger;
 
     public void setNextLogger(AbstractLogger nextLogger){
