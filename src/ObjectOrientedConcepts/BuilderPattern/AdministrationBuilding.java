@@ -1,4 +1,4 @@
-package DesignPatternConcepts.BuilderPattern;
+package ObjectOrientedConcepts.BuilderPattern;
 
 public class AdministrationBuilding {
     public static void main(String[] args) {

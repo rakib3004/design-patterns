@@ -1,4 +1,4 @@
-package DesignPatternConcepts.BuilderPattern;
+package ObjectOrientedConcepts.BuilderPattern;
 
 public class Department {
 
