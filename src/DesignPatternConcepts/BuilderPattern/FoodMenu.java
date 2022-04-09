@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FoodMenu {
-    private List<FoodItem> foodItems = new ArrayList<FoodItem>();
+    private List<Item> foodItems = new ArrayList<Item>();
 
-    public void addFood(FoodItem foodItem){
+    public void addFood(Item foodItem){
         foodItems.add(foodItem);
     }
 
     public float totalBill(){
         float totalBill = 0.0f;
 
-        for (FoodItem foodItem : foodItems) {
+        for (Item foodItem : foodItems) {
             totalBill += foodItem.foodPrice();
         }
         return totalBill;
