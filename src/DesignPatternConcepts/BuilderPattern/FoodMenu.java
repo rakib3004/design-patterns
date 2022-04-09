@@ -23,7 +23,7 @@ public class FoodMenu {
     public void showFoods(){
 
         for (Item item : foodItems) {
-            System.out.print("Item : " + item.foodPrice());
+            System.out.print("Food Name : " + item.foodName());
             System.out.print(", Packing : " + item.packing().pack());
             System.out.println(", Price : " + item.foodPrice());
         }
