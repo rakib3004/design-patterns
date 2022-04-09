@@ -24,5 +24,14 @@ public class UniversityDatabase {
        AgriculturalUniversity agriculturalUniversity = new AgriculturalUniversity();
        agriculturalUniversity.setId("Uni001");
        universityHashMap.put(agriculturalUniversity.getId(),agriculturalUniversity);
+
+
+        EngineeringUniversity engineeringUniversity = new EngineeringUniversity();
+        engineeringUniversity.setId("Uni002");
+        universityHashMap.put(engineeringUniversity.getId(),engineeringUniversity);
+
+        MedicalUniversity medicalUniversity = new MedicalUniversity();
+        medicalUniversity.setId("Uni003");
+        universityHashMap.put(medicalUniversity.getId(),medicalUniversity);
     }
 }
