@@ -1,5 +1,5 @@
 package DesignPatternConcepts.BuilderPattern;
 
-public interface Packing {
+public interface Box {
     public String pack();
 }

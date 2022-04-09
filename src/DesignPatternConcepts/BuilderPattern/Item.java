@@ -1,8 +1,8 @@
 package DesignPatternConcepts.BuilderPattern;
 
-public interface FoodItem {
+public interface Item {
 public String foodName();
-public Packing packing();
+public Box packing();
 public String foodPrice();
 
 }
