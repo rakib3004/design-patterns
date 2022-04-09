@@ -1,14 +1,14 @@
 package DesignPatternConcepts.BuilderPattern;
 
-public class Kacci extends FoodItem {
+public class FriedRice extends FoodItem {
 
     @Override
     public String foodName() {
-        return "Kacci";
+        return "Fried Rice";
     }
 
     @Override
     public float foodPrice() {
-        return 150.0f;
+        return 50.0f;
     }
 }
