@@ -75,10 +75,10 @@ public class AHPcalculation {
                 ahpWeight[1].getHighMediumDemand(), ahpWeight[1].getLowMediumDemand(),
                 ahpWeight[1].getLowlyDemand(), ahpWeight[2].getLatestBook(),
                 ahpWeight[2].getNewlyBook(), ahpWeight[2].getRecentlyOldBook(), ahpWeight[2].getOldBook(),
-                ahpWeight[2].oldestBook,
-                ahpWeight[3].uponnashType, ahpWeight[3].kobitaType,
-                ahpWeight[3].scienceFictionType, ahpWeight[3].scienceFictionType,
-                ahpWeight[3].kisorUponnashType, ahpWeight[3].othersType);
+                ahpWeight[2].getOldestBook(),
+                ahpWeight[3].getUponnashType(), ahpWeight[3].getKisorUponnashType(),
+                ahpWeight[3].getScienceFictionType(), ahpWeight[3].getScienceFictionType(),
+                ahpWeight[3].getKisorUponnashType(), ahpWeight[3].getOthersType());
 
         return ahPcriteriaWeight;
 
