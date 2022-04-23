@@ -2,27 +2,27 @@ package AnalyticalHierarchyProcessBuilder;
 
 public class AHPcriteriaWeight {
 
-    public double lowPrice;
-    public double mediumPrice;
-    public double highPrice;
+    private double lowPrice;
+    private double mediumPrice;
+    private double highPrice;
 
-    public double highlyDemand;
-    public double highMediumDemand;
-    public double lowMediumDemand;
-    public double lowlyDemand;
+    private double highlyDemand;
+    private double highMediumDemand;
+    private double lowMediumDemand;
+    private double lowlyDemand;
 
-    public double latestBook;
-    public double newlyBook;
-    public double recentlyOldBook;
-    public double oldBook;
-    public double oldestBook;
+    private double latestBook;
+    private double newlyBook;
+    private double recentlyOldBook;
+    private double oldBook;
+    private double oldestBook;
 
-    public double uponnashType;
-    public double kobitaType;
-    public double scienceFictionType;
-    public double kisorUponnashType;
-    public double religionType;
-    public double othersType;
+    private double uponnashType;
+    private double kobitaType;
+    private double scienceFictionType;
+    private double kisorUponnashType;
+    private double religionType;
+    private double othersType;
 
     public AHPcriteriaWeight() {
     }
