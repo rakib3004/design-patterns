@@ -4,12 +4,7 @@ package AHPalgorithm;
 
 public class AHPcalculation {
     AHPcriteriaWeight ahPcriteriaWeight;
-    TypeCountRegression typeCountRegression = new TypeCountRegression();
-    TypeMonthRegression typeMonthRegression = new TypeMonthRegression();
-    TypePriceRegression typePriceRegression = new TypePriceRegression();
-    CountMonthRegression countMonthRegression = new CountMonthRegression();
-    CountPriceRegression countPriceRegression = new CountPriceRegression();
-    MonthPriceRegression monthPriceRegression = new MonthPriceRegression();
+
     AHPcriteriaWeight ahPcriteriaWeight4, ahPcriteriaWeight2, ahPcriteriaWeight3, ahPcriteriaWeight1;
     AHPprocessImplementation ahPprocessImplementation = new AHPprocessImplementation();
     TypeCriteriaAHP typeCriteriaAHP = new TypeCriteriaAHP();
@@ -23,13 +18,6 @@ public class AHPcalculation {
         double[][] AHPMatrix = new double[4][4];
 
         int i, j;
-        // assume priority among types by linear regression but which is not efficient
-        AHPMatrix[0][1] = typeCountRegression.typeCountRegressionMethods(priorityData, numberOfBooks);
-        AHPMatrix[0][2] = typeMonthRegression.typeMonthRegressionMethods(priorityData, numberOfBooks);
-        AHPMatrix[0][3] = typePriceRegression.typePriceRegressionMethods(priorityData, numberOfBooks);
-        AHPMatrix[1][2] = countMonthRegression.countMonthRegressionMethods(priorityData, numberOfBooks);
-        AHPMatrix[1][3] = countPriceRegression.countPriceRegressionMethods(priorityData, numberOfBooks);
-        AHPMatrix[2][3] = monthPriceRegression.monthPriceRegressionMethods(priorityData, numberOfBooks);
 
         // new methodology for analytical hierarchy process.
         AHPMatrix[0][1] = 2.0;
