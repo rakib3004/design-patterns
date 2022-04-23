@@ -1,4 +1,4 @@
-package AHPalgorithm;
+package AnalyticalHierarchyProcessBuilder;
 
 public class PriceCriteriaAHP {
     AHPcriteriaWeight ahPcriteriaWeight;

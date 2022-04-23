@@ -1,4 +1,4 @@
-package AHPalgorithm;
+package AnalyticalHierarchyProcessBuilder;
 
 
 public class AHPprocessImplementation {
@@ -6,7 +6,7 @@ public class AHPprocessImplementation {
     CountCriteriaAHP countCriteriaAHP;
 
     public PriorityData[] ahpProcessImplementationMethods(AHPcriteriaWeight ahPcriteriaWeight,
-            PriorityData[] priorityData, int numberOfBooks) {
+                                                          PriorityData[] priorityData, int numberOfBooks) {
 
 
         int iterator1;
