@@ -58,11 +58,11 @@ public class AHPprocessImplementation {
 
             for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
                 if (Integer.parseInt(priorityData[iterator1].bookPrice) <= 180) {
-                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.lowPrice;
+                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.getLowPrice();
                 } else if (Integer.parseInt(priorityData[iterator1].bookPrice) <= 250) {
-                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.mediumPrice;
+                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.getMediumPrice();
                 } else {
-                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.highPrice;
+                    priorityData[iterator1].pricePriority = ahPcriteriaWeight.getHighPrice();
                 }
             }
         } catch (Exception exception) {
@@ -70,15 +70,15 @@ public class AHPprocessImplementation {
 
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
             if (priorityData[iterator1].timePriority <= 4.00) {
-                priorityData[iterator1].timePriority = ahPcriteriaWeight.latestBook;
+                priorityData[iterator1].timePriority = ahPcriteriaWeight.getLatestBook();
             } else if (priorityData[iterator1].timePriority <= 6.00) {
-                priorityData[iterator1].timePriority = ahPcriteriaWeight.newlyBook;
+                priorityData[iterator1].timePriority = ahPcriteriaWeight.getNewlyBook();
             } else if (priorityData[iterator1].timePriority <= 8.00) {
-                priorityData[iterator1].timePriority = ahPcriteriaWeight.recentlyOldBook;
+                priorityData[iterator1].timePriority = ahPcriteriaWeight.getRecentlyOldBook();
             } else if (priorityData[iterator1].timePriority <= 10.00) {
-                priorityData[iterator1].timePriority = ahPcriteriaWeight.oldBook;
+                priorityData[iterator1].timePriority = ahPcriteriaWeight.getOldBook();
             } else if (priorityData[iterator1].timePriority <= 12.00) {
-                priorityData[iterator1].timePriority = ahPcriteriaWeight.oldestBook;
+                priorityData[iterator1].timePriority = ahPcriteriaWeight.getOldestBook();
             }
         }
 

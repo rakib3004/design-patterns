@@ -68,11 +68,6 @@ public class CountCriteriaAHP {
                 countWeightMatrix[3]);
 
 
-        System.out.println(ahPcriteriaWeight.highlyDemand + "---------->  ahPcriteriaWeight.highlyDemand");
-        System.out.println(ahPcriteriaWeight.highMediumDemand + "---------->  ahPcriteriaWeight.highMediumDemand");
-        System.out.println(ahPcriteriaWeight.lowMediumDemand + "---------->  ahPcriteriaWeight.lowMediumDemand");
-        System.out.println(ahPcriteriaWeight.lowlyDemand + "---------->  ahPcriteriaWeight.lowlyDemand");
-        System.out.println();
         return ahPcriteriaWeight;
     }
 }

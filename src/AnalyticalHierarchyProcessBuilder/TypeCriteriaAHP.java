@@ -77,14 +77,7 @@ public class TypeCriteriaAHP {
                 typeWeightMatrix[1], typeWeightMatrix[2], typeWeightMatrix[3], typeWeightMatrix[4],
                 typeWeightMatrix[5]);
 
-        // show all calculated value of sub criteria
-        System.out.println(ahPcriteriaWeight.uponnashType + "---------->  ahPcriteriaWeight.uponnashType");
-        System.out.println(ahPcriteriaWeight.kobitaType + "---------->  ahPcriteriaWeight.kobitaType");
-        System.out.println(ahPcriteriaWeight.scienceFictionType + "---------->  ahPcriteriaWeight.scienceFictionType");
-        System.out.println(ahPcriteriaWeight.kisorUponnashType + "---------->  ahPcriteriaWeight.kisorUponnashType");
-        System.out.println(ahPcriteriaWeight.religionType + "---------->  ahPcriteriaWeight.religionType");
-        System.out.println(ahPcriteriaWeight.othersType + "---------->  ahPcriteriaWeight.othersType");
-        System.out.println();
+
 
         return ahPcriteriaWeight;
 
