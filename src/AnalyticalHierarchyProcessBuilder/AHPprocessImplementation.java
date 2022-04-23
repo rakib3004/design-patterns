@@ -13,18 +13,18 @@ public class AHPprocessImplementation {
 
 
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
-            if (priorityData[iterator1].borrowPriority <= 10) {
+            if (priorityData[iterator1].getBorrowPriority()<= 10) {
 
-                priorityData[iterator1].borrowPriority = ahPcriteriaWeight.getLowlyDemand();
-            } else if (priorityData[iterator1].borrowPriority <= 20) {
+                priorityData[iterator1].setBorrowPriority(ahPcriteriaWeight.getLowlyDemand()) ;
+            } else if (priorityData[iterator1].getBorrowPriority() <= 20) {
 
-                priorityData[iterator1].borrowPriority = ahPcriteriaWeight.getLowMediumDemand();
-            } else if (priorityData[iterator1].borrowPriority <= 30) {
+                priorityData[iterator1].setBorrowPriority(ahPcriteriaWeight.getLowMediumDemand())  ;
+            } else if (priorityData[iterator1].getBorrowPriority() <= 30) {
 
-                priorityData[iterator1].borrowPriority = ahPcriteriaWeight.getHighMediumDemand();
-            } else if (priorityData[iterator1].borrowPriority <= 40) {
+                priorityData[iterator1].setBorrowPriority(ahPcriteriaWeight.getHighMediumDemand()) ;
+            } else if (priorityData[iterator1].getBorrowPriority() <= 40) {
 
-                priorityData[iterator1].borrowPriority = ahPcriteriaWeight.getHighlyDemand();
+                priorityData[iterator1].setBorrowPriority(ahPcriteriaWeight.getHighlyDemand())  ;
             }
         }
 

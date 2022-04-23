@@ -1,15 +1,15 @@
 package AnalyticalHierarchyProcessBuilder;
 
 public class PriorityData {
-    public double bookPriority;
-    public double timePriority;
-    public double borrowPriority;
-    public double pricePriority;
-    public String bookId;
-    public String bookPrice;
+    private double bookPriority;
+    private double timePriority;
+    private double borrowPriority;
+    private double pricePriority;
+    private String bookId;
+    private String bookPrice;
 
 
-    public PriorityData(double bookPriority, double timePriority, double borrowPriority, double pricePriority) {
+    private PriorityData(double bookPriority, double timePriority, double borrowPriority, double pricePriority) {
         this.bookPriority = bookPriority;
         this.timePriority = timePriority;
         this.borrowPriority = borrowPriority;
