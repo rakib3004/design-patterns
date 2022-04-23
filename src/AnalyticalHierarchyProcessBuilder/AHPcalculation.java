@@ -4,8 +4,7 @@ package AnalyticalHierarchyProcessBuilder;
 public class AHPcalculation {
     AHPcriteriaWeight ahPcriteriaWeight;
 
-    AHPcriteriaWeight ahPcriteriaWeight4, ahPcriteriaWeight2, ahPcriteriaWeight3, ahPcriteriaWeight1;
-    AHPprocessImplementation ahPprocessImplementation = new AHPprocessImplementation();
+    AHPcriteriaWeight [] ahpWeight= new AHPcriteriaWeight[4];
     TypeCriteriaAHP typeCriteriaAHP = new TypeCriteriaAHP();
     CountCriteriaAHP countCriteriaAHP = new CountCriteriaAHP();
     MonthCriteriaAHP monthCriteriaAHP = new MonthCriteriaAHP();
@@ -66,20 +65,20 @@ public class AHPcalculation {
         }
 
 
-        ahPcriteriaWeight4 = typeCriteriaAHP.typeCriteriaAHPMethods(weightMatrix[0], priorityData, numberOfBooks);
-        ahPcriteriaWeight2 = countCriteriaAHP.countCriteriaAHPMethods(weightMatrix[1], priorityData, numberOfBooks);
-        ahPcriteriaWeight3 = monthCriteriaAHP.monthCriteriaAHPMethods(weightMatrix[2], priorityData, numberOfBooks);
-        ahPcriteriaWeight1 = priceCriteriaAHP.priceCriteriaAHPMethods(weightMatrix[3], priorityData, numberOfBooks);
+        ahpWeight[3] = typeCriteriaAHP.typeCriteriaAHPMethods(weightMatrix[0], priorityData, numberOfBooks);
+        ahpWeight[1] = countCriteriaAHP.countCriteriaAHPMethods(weightMatrix[1], priorityData, numberOfBooks);
+        ahpWeight[2]= monthCriteriaAHP.monthCriteriaAHPMethods(weightMatrix[2], priorityData, numberOfBooks);
+        ahpWeight[0] = priceCriteriaAHP.priceCriteriaAHPMethods(weightMatrix[3], priorityData, numberOfBooks);
 
-        ahPcriteriaWeight = new AHPcriteriaWeight(ahPcriteriaWeight1.highPrice, ahPcriteriaWeight1.mediumPrice,
-                ahPcriteriaWeight1.lowPrice, ahPcriteriaWeight2.highlyDemand,
-                ahPcriteriaWeight2.highMediumDemand, ahPcriteriaWeight2.lowMediumDemand,
-                ahPcriteriaWeight2.lowlyDemand, ahPcriteriaWeight3.latestBook,
-                ahPcriteriaWeight3.newlyBook, ahPcriteriaWeight3.recentlyOldBook, ahPcriteriaWeight3.oldBook,
-                ahPcriteriaWeight3.oldestBook,
-                ahPcriteriaWeight4.uponnashType, ahPcriteriaWeight4.kobitaType,
-                ahPcriteriaWeight4.scienceFictionType, ahPcriteriaWeight4.scienceFictionType,
-                ahPcriteriaWeight4.kisorUponnashType, ahPcriteriaWeight4.othersType);
+        ahPcriteriaWeight = new AHPcriteriaWeight(ahpWeight[0].getHighPrice(), ahpWeight[0].getMediumPrice(),
+                ahpWeight[0].getLowPrice(), ahpWeight[1].getHighlyDemand(),
+                ahpWeight[1].getHighMediumDemand(), ahpWeight[1].getLowMediumDemand(),
+                ahpWeight[1].getLowlyDemand(), ahpWeight[2].getLatestBook(),
+                ahpWeight[2].getNewlyBook(), ahpWeight[2].getRecentlyOldBook(), ahpWeight[2].getOldBook(),
+                ahpWeight[2].oldestBook,
+                ahpWeight[3].uponnashType, ahpWeight[3].kobitaType,
+                ahpWeight[3].scienceFictionType, ahpWeight[3].scienceFictionType,
+                ahpWeight[3].kisorUponnashType, ahpWeight[3].othersType);
 
         return ahPcriteriaWeight;
 
