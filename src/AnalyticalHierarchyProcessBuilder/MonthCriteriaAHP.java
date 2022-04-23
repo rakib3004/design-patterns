@@ -22,9 +22,7 @@ public class MonthCriteriaAHP {
                 monthCriterAHPMatrix[iterator][jterator] = (monthCounter[iterator] / monthCounter[jterator]);
             }
         }
-        // new methodology for analytical hierarchy process to calculate sub criteria by
-        // issuing book by category
-        // add new methodology for analytical hierarchy process
+
         monthCriterAHPMatrix[0][1] = 1.35;
         monthCriterAHPMatrix[0][2] = 2.6;
         monthCriterAHPMatrix[0][3] = 4.7;
@@ -78,14 +76,7 @@ public class MonthCriteriaAHP {
 
         ahPcriteriaWeight = new AHPcriteriaWeight(monthWeightMatrix[0], monthWeightMatrix[1],
                 monthWeightMatrix[2], monthWeightMatrix[3], monthWeightMatrix[4]);
-        // print all criteria value to show the evaluation
 
-        System.out.println(ahPcriteriaWeight.latestBook + "---------->  ahPcriteriaWeight.latestBook");
-        System.out.println(ahPcriteriaWeight.newlyBook + "---------->  ahPcriteriaWeight.newlyBook");
-        System.out.println(ahPcriteriaWeight.recentlyOldBook + "---------->  ahPcriteriaWeight.recentlyOldBook");
-        System.out.println(ahPcriteriaWeight.oldBook + "---------->  ahPcriteriaWeight.oldBook");
-        System.out.println(ahPcriteriaWeight.oldestBook + "---------->  ahPcriteriaWeight.oldestBook");
-        System.out.println();
         return ahPcriteriaWeight;
     }
 }

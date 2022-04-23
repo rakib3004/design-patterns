@@ -19,8 +19,6 @@ public class CountCriteriaAHP {
             }
         }
 
-        // new methodology for analytical hierarchy process to calculate sub criteria by
-        // purchasing book category
         countCriteriaAHPMatrix[0][1] = 1.5;
         countCriteriaAHPMatrix[0][2] = 7.5;
         countCriteriaAHPMatrix[0][3] = 11.0;
@@ -69,7 +67,6 @@ public class CountCriteriaAHP {
         ahPcriteriaWeight = new AHPcriteriaWeight(countWeightMatrix[0], countWeightMatrix[1], countWeightMatrix[2],
                 countWeightMatrix[3]);
 
-        // print all criteria value to show the evaluation
 
         System.out.println(ahPcriteriaWeight.highlyDemand + "---------->  ahPcriteriaWeight.highlyDemand");
         System.out.println(ahPcriteriaWeight.highMediumDemand + "---------->  ahPcriteriaWeight.highMediumDemand");

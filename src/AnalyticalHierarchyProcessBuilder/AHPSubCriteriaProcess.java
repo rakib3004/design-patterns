@@ -10,7 +10,6 @@ public class AHPSubCriteriaProcess {
         int[] priceCounter = new int[3];
         double[] parsingPriceCounter = new double[3];
 
-        // count number of books on each type of price category in AHP Calculation
         priceCounter[0] = 1;
         priceCounter[1] = 1;
         priceCounter[2] = 1;
@@ -59,9 +58,6 @@ public class AHPSubCriteriaProcess {
         int[] monthCounter = new int[5];
         double[] parsingMonthCounter = new double[5];
 
-        // count number of books on each type of date of issue category in AHP
-        // Calculation
-
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].timePriority <= 5.60) {
                 monthCounter[4]++;
@@ -89,8 +85,7 @@ public class AHPSubCriteriaProcess {
     public double[] typeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] typeCounter = new int[6];
         double[] parsingTypeCounter = new double[6];
-        // count number of books on each type of literature field category in AHP
-        // Calculation
+
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].bookId.substring(0, 2).equals("01")) {
@@ -121,7 +116,6 @@ public class AHPSubCriteriaProcess {
                 typeCounter[5]++;
             }
         }
-        // parsing integer to double value through string
         for (iterator = 0; iterator < 6; iterator++) {
             parsingTypeCounter[iterator] = Double.parseDouble(String.valueOf(typeCounter[iterator]));
         }
