@@ -36,33 +36,33 @@ public class AHPprocessImplementation {
         // set AHP Priority according to there type priority
 
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
-            if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("01")) {
+            if (priorityData[iterator1].bookId.substring(0, 2).equals("01")) {
                 // System.out.println(iterator1 + ":::: Uponnash");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.uponnashType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("05")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("05")) {
                 // System.out.println(iterator1 + ":::: Rochonaboli");
 
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.uponnashType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("02")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("02")) {
                 // System.out.println(iterator1 + ":::: Kobita");
 
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.kobitaType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("13")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("13")) {
                 // System.out.println(iterator1 + ":::: Biggan");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.scienceFictionType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("14")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("14")) {
                 // System.out.println(iterator1 + ":::: Gobeshona");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.scienceFictionType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("06")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("06")) {
                 // System.out.println(iterator1 + ":::: Science Fiction");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.scienceFictionType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("10")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("10")) {
                 // System.out.println(iterator1 + ":::: Kisore Uponnash");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.kisorUponnashType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("11")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("11")) {
                 // System.out.println(iterator1 + ":::: Shishu Shahitto");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.kisorUponnashType;
-            } else if (priorityData[iterator1].bookData.bookId.substring(0, 2).equals("04")) {
+            } else if (priorityData[iterator1].bookId.substring(0, 2).equals("04")) {
                 // System.out.println(iterator1 + ":::: Religion");
                 priorityData[iterator1].bookPriority = ahPcriteriaWeight.religionType;
             } else {
@@ -74,10 +74,10 @@ public class AHPprocessImplementation {
             // set AHP Priority according to there price priority
 
             for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
-                if (Integer.parseInt(priorityData[iterator1].bookData.bookPrice) <= 180) {
+                if (Integer.parseInt(priorityData[iterator1].bookPrice) <= 180) {
                     // System.out.println(iterator1 + ":::: 180 er niche dam");
                     priorityData[iterator1].pricePriority = ahPcriteriaWeight.lowPrice;
-                } else if (Integer.parseInt(priorityData[iterator1].bookData.bookPrice) <= 250) {
+                } else if (Integer.parseInt(priorityData[iterator1].bookPrice) <= 250) {
                     // System.out.println(iterator1 + ":::: 250 er niche dam");
                     priorityData[iterator1].pricePriority = ahPcriteriaWeight.mediumPrice;
                 } else {
@@ -107,7 +107,6 @@ public class AHPprocessImplementation {
                 priorityData[iterator1].timePriority = ahPcriteriaWeight.oldestBook;
             }
         }
-        // calculate all sub criteria's priority for getting all object value
         double newPriorityValue;
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
             newPriorityValue = priorityData[iterator1].bookPriority +
@@ -115,19 +114,9 @@ public class AHPprocessImplementation {
                     priorityData[iterator1].timePriority +
                     priorityData[iterator1].pricePriority;
 
-            // set AHP priority weight
 
-            priorityData[iterator1].setAHPweight(newPriorityValue);
-            priorityData[iterator1].setRankValue(newPriorityValue);
-            // System.out.println(priorityData[iterator1].bookData.bookName+"\t"+newPriorityValue);
         }
-        // print all books AHP methods books value
-        for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
 
-            System.out.println("Book Name : " + priorityData[iterator1].bookData.bookName + "\t" +
-                    "Writer Name: " + priorityData[iterator1].bookData.writerName + "\t" + "Weight"
-                    + priorityData[iterator1].getAHPweight());
-        }
         return priorityData;
     }
 }

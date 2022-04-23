@@ -5,6 +5,8 @@ public class PriorityData {
     public double timePriority;
     public double borrowPriority;
     public double pricePriority;
+    public String bookId;
+    public String bookPrice;
 
 
     public PriorityData(double bookPriority, double timePriority, double borrowPriority, double pricePriority) {
