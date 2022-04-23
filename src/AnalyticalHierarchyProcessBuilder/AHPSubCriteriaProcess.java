@@ -14,9 +14,9 @@ public class AHPSubCriteriaProcess {
         priceCounter[1] = 1;
         priceCounter[2] = 1;
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (Integer.parseInt(priorityData[iterator].bookPrice) <= 180) {
+            if (Integer.parseInt(priorityData[iterator].getBookPrice()) <= 180) {
                 priceCounter[0]++;
-            } else if (Integer.parseInt(priorityData[iterator].bookPrice) <= 250) {
+            } else if (Integer.parseInt(priorityData[iterator].getBookPrice()) <= 250) {
                 priceCounter[1]++;
             } else {
                 priceCounter[2]++;
@@ -36,13 +36,13 @@ public class AHPSubCriteriaProcess {
         // count number of books on each type of purchase category in AHP Calculation
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (priorityData[iterator].borrowPriority <= 10) {
+            if (priorityData[iterator].getBorrowPriority() <= 10) {
                 countCounter[3]++;
-            } else if (priorityData[iterator].borrowPriority <= 20) {
+            } else if (priorityData[iterator].getBorrowPriority() <= 20) {
                 countCounter[2]++;
-            } else if (priorityData[iterator].borrowPriority <= 30) {
+            } else if (priorityData[iterator].getBorrowPriority() <= 30) {
                 countCounter[1]++;
-            } else if (priorityData[iterator].borrowPriority <= 40) {
+            } else if (priorityData[iterator].getBorrowPriority() <= 40) {
                 countCounter[0]++;
             }
         }
@@ -59,19 +59,19 @@ public class AHPSubCriteriaProcess {
         double[] parsingMonthCounter = new double[5];
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (priorityData[iterator].timePriority <= 5.60) {
+            if (priorityData[iterator].getTimePriority() <= 5.60) {
                 monthCounter[4]++;
 
-            } else if (priorityData[iterator].timePriority <= 7.20) {
+            } else if (priorityData[iterator].getTimePriority() <= 7.20) {
                 monthCounter[3]++;
 
-            } else if (priorityData[iterator].timePriority <= 9.50) {
+            } else if (priorityData[iterator].getTimePriority() <= 9.50) {
                 monthCounter[2]++;
 
-            } else if (priorityData[iterator].timePriority <= 12.00) {
+            } else if (priorityData[iterator].getTimePriority() <= 12.00) {
                 monthCounter[1]++;
 
-            } else if (priorityData[iterator].timePriority <= 14.00) {
+            } else if (priorityData[iterator].getTimePriority() <= 14.00) {
                 monthCounter[0]++;
             }
         }
@@ -88,28 +88,28 @@ public class AHPSubCriteriaProcess {
 
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (priorityData[iterator].bookId.substring(0, 2).equals("01")) {
+            if (priorityData[iterator].getBookId().substring(0, 2).equals("01")) {
                 typeCounter[0]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("05")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("05")) {
 
                 typeCounter[0]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("02")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("02")) {
 
                 typeCounter[1]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("13")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("13")) {
 
                 typeCounter[2]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("08")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("08")) {
                 typeCounter[2]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("06")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("06")) {
                 typeCounter[2]++;
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("10")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("10")) {
                 typeCounter[3]++;
 
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("11")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("11")) {
                 typeCounter[3]++;
 
-            } else if (priorityData[iterator].bookId.substring(0, 2).equals("04")) {
+            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("04")) {
                 typeCounter[4]++;
 
             } else {

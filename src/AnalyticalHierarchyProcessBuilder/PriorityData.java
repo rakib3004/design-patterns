@@ -5,6 +5,23 @@ public class PriorityData {
     private double timePriority;
     private double borrowPriority;
     private double pricePriority;
+
+    public String getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getBookPrice() {
+        return bookPrice;
+    }
+
+    public void setBookPrice(String bookPrice) {
+        this.bookPrice = bookPrice;
+    }
+
     private String bookId;
     private String bookPrice;
 
