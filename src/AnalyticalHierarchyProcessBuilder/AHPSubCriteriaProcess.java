@@ -7,7 +7,7 @@ public class AHPSubCriteriaProcess {
 
 
 
-    public double[] countCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
+    public double[] borrowCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] countCounter = new int[4];
         double[] parsingCountCounter = new double[4];
 
@@ -61,40 +61,20 @@ public class AHPSubCriteriaProcess {
     }
 
     public double[] typeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
-        int[] typeCounter = new int[6];
-        double[] parsingTypeCounter = new double[6];
+        int[] typeCounter = new int[3];
+        double[] parsingTypeCounter = new double[3];
 
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].getBookId().substring(0, 2).equals("01")) {
                 typeCounter[0]++;
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("05")) {
-
-                typeCounter[0]++;
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("02")) {
-
-                typeCounter[1]++;
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("13")) {
-
-                typeCounter[2]++;
             } else if (priorityData[iterator].getBookId().substring(0, 2).equals("08")) {
-                typeCounter[2]++;
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("06")) {
-                typeCounter[2]++;
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("10")) {
-                typeCounter[3]++;
-
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("11")) {
-                typeCounter[3]++;
-
-            } else if (priorityData[iterator].getBookId().substring(0, 2).equals("04")) {
-                typeCounter[4]++;
-
+                typeCounter[1]++;
             } else {
-                typeCounter[5]++;
+                typeCounter[2]++;
             }
         }
-        for (iterator = 0; iterator < 6; iterator++) {
+        for (iterator = 0; iterator < 3; iterator++) {
             parsingTypeCounter[iterator] = Double.parseDouble(String.valueOf(typeCounter[iterator]));
         }
         return parsingTypeCounter;
