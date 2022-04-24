@@ -7,15 +7,19 @@ public class AHPSubCriteriaProcess {
 
     int iterator;
 
-
+    public  AHPSubCriteriaProcess() {
+    }
     List<BorrowCriteriaMatcher> borrowCriteriaMatchers;
-    public  AHPSubCriteriaProcess(List<BorrowCriteriaMatcher> borrowCriteriaMatchers) {
+    List<TimeCriteriaMatcher> timeCriteriaMatchers;
+
+   public  AHPSubCriteriaProcess(List<BorrowCriteriaMatcher> borrowCriteriaMatchers,List<TimeCriteriaMatcher> timeCriteriaMatchers) {
     super();
     this.borrowCriteriaMatchers=borrowCriteriaMatchers;
+    this.timeCriteriaMatchers=timeCriteriaMatchers;
+
     }
 
-    public AHPSubCriteriaProcess() {
-    }
+
 
 
 
@@ -47,21 +51,12 @@ public class AHPSubCriteriaProcess {
         int[] timeCounter = new int[5];
         double[] parsingTimeCounter = new double[5];
 
+        int index=0;
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (priorityData[iterator].getTimePriority() <= 5.60) {
-                timeCounter[4]++;
-
-            } else if (priorityData[iterator].getTimePriority() <= 7.20) {
-                timeCounter[3]++;
-
-            } else if (priorityData[iterator].getTimePriority() <= 9.50) {
-                timeCounter[2]++;
-
-            } else if (priorityData[iterator].getTimePriority() <= 12.00) {
-                timeCounter[1]++;
-
-            } else if (priorityData[iterator].getTimePriority() <= 14.00) {
-                timeCounter[0]++;
+            for (TimeCriteriaMatcher timeCriteriaMatcher: timeCriteriaMatchers){
+                if(timeCriteriaMatcher.compareTimeCount(priorityData[iterator].getBorrowPriority()))
+                    index=timeCriteriaMatcher.getBorrowClassIndex();
+                timeCounter[index]++;
             }
         }
 
@@ -70,6 +65,10 @@ public class AHPSubCriteriaProcess {
         }
         return parsingTimeCounter;
     }
+
+
+
+
 
     public double[] typeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] typeCounter = new int[3];

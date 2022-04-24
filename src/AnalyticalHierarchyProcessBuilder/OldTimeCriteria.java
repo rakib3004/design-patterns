@@ -1,6 +1,6 @@
 package AnalyticalHierarchyProcessBuilder;
 
-public class LatestTimeCriteria implements TimeCriteriaMatcher{
+public class OldTimeCriteria implements TimeCriteriaMatcher {
     @Override
     public boolean compareTimeCount(double timePriority) {
         return false;

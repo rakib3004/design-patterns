@@ -1,6 +1,6 @@
 package AnalyticalHierarchyProcessBuilder;
 
 public interface TimeCriteriaMatcher {
-    public boolean compareBorrowCount(double timePriority);
+    public boolean compareTimeCount(double timePriority);
     public int getBorrowClassIndex();
 }
