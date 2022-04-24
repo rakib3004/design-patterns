@@ -5,8 +5,13 @@ import java.util.List;
 
 public class AHPSubCriteriaProcess {
 
-    int iterator;
+    private static AHPSubCriteriaProcess ahpSubCriteriaProcess = new AHPSubCriteriaProcess();
 
+
+
+    public static AHPSubCriteriaProcess getInstance(){
+        return ahpSubCriteriaProcess;
+    }
     public  AHPSubCriteriaProcess() {
     }
     List<BorrowCriteriaMatcher> borrowCriteriaMatchers;
@@ -20,10 +25,6 @@ public class AHPSubCriteriaProcess {
     }
 
 
-
-
-
-
     public double[] borrowCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] borrowCounter = new int[4];
         double[] parsingBorrowCounter = new double[4];
@@ -31,7 +32,7 @@ public class AHPSubCriteriaProcess {
 
 
 
-        for (iterator = 0; iterator < numberOfBooks; iterator++) {
+        for (int iterator = 0; iterator < numberOfBooks; iterator++) {
             for (BorrowCriteriaMatcher borrowCriteriaMatcher: borrowCriteriaMatchers){
                 if(borrowCriteriaMatcher.compareBorrowCount(priorityData[iterator].getBorrowPriority()))
                     index=borrowCriteriaMatcher.getBorrowClassIndex();
@@ -39,7 +40,7 @@ public class AHPSubCriteriaProcess {
             }
         }
 
-        for (iterator = 0; iterator < 4; iterator++) {
+        for (int iterator = 0; iterator < 4; iterator++) {
             parsingBorrowCounter[iterator] = Double.parseDouble(String.valueOf(borrowCounter[iterator]));
         }
 
@@ -51,7 +52,7 @@ public class AHPSubCriteriaProcess {
         double[] parsingTimeCounter = new double[5];
 
         int index=0;
-        for (iterator = 0; iterator < numberOfBooks; iterator++) {
+        for (int iterator = 0; iterator < numberOfBooks; iterator++) {
             for (TimeCriteriaMatcher timeCriteriaMatcher: timeCriteriaMatchers){
                 if(timeCriteriaMatcher.compareTimeCount(priorityData[iterator].getBorrowPriority()))
                     index=timeCriteriaMatcher.getBorrowClassIndex();
@@ -59,7 +60,7 @@ public class AHPSubCriteriaProcess {
             }
         }
 
-        for (iterator = 0; iterator < 5; iterator++) {
+        for (int iterator = 0; iterator < 5; iterator++) {
             parsingTimeCounter[iterator] = Double.parseDouble(String.valueOf(timeCounter[iterator]));
         }
         return parsingTimeCounter;
@@ -74,7 +75,7 @@ public class AHPSubCriteriaProcess {
         double[] parsingTypeCounter = new double[3];
 
 
-        for (iterator = 0; iterator < numberOfBooks; iterator++) {
+        for (int iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].getBookId().substring(0, 2).equals("01")) {
                 typeCounter[0]++;
             } else if (priorityData[iterator].getBookId().substring(0, 2).equals("08")) {
@@ -83,7 +84,7 @@ public class AHPSubCriteriaProcess {
                 typeCounter[2]++;
             }
         }
-        for (iterator = 0; iterator < 3; iterator++) {
+        for (int iterator = 0; iterator < 3; iterator++) {
             parsingTypeCounter[iterator] = Double.parseDouble(String.valueOf(typeCounter[iterator]));
         }
         return parsingTypeCounter;

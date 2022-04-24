@@ -14,8 +14,16 @@ public class SubCriteriaCalculation<priorityData> {
     }
 
     public void calculateSubCriteria(){
-        SubCriteria subCriteria = new SubCriteria(new TimeSubCriteria());
-        subCriteria.subCriteriaCalculation()
+        SubCriteria timeSubCriteria = new SubCriteria(new TimeSubCriteria());
+        timeSubCriteria.subCriteriaCalculation(criteria,priorityData,numberOfBooks);
+
+        SubCriteria typeSubCriteria = new SubCriteria(new TypeSubCriteria());
+        typeSubCriteria.subCriteriaCalculation(criteria,priorityData,numberOfBooks);
+
+        SubCriteria borrowSubCriteria = new SubCriteria(new BorrowSubCriteria());
+        borrowSubCriteria.subCriteriaCalculation(criteria,priorityData,numberOfBooks);
+
+
     }
 
 

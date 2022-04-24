@@ -6,8 +6,8 @@ public class SubCriteria {
     public SubCriteria( SubCriteriaAHP subCriteriaAHP) {
         this.subCriteriaAHP=subCriteriaAHP;
     }
-    public double [] subCriteriaCalculation(int matrixSize, double [] criteriaCount, double criteriaValue){
-        return  subCriteriaAHP.subCriteriaImplementation( matrixSize, criteriaCount, criteriaValue);
+    public double [] subCriteriaCalculation(double criteria, PriorityData[] priorityData, int numberOfBooks){
+       return subCriteriaAHP.subCriteriaImplementation(criteria,priorityData, numberOfBooks);
     }
 
 }

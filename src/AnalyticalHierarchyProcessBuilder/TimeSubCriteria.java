@@ -1,14 +1,15 @@
 package AnalyticalHierarchyProcessBuilder;
 
 public class TimeSubCriteria implements SubCriteriaAHP{
-    AHPcalculation ahPcalculation = new AHPcalculation();
-    @Override
-    public double[] subCriteriaImplementation(int matrixSize, double [] criteriaCount, double criteriaValue) {
-        return ahPcalculation.subCriteriaCalculationAnalyticalHierarchyProcess(matrixSize,criteriaCount,criteriaValue);
-    }
+    AHPcalculation ahPcalculation = AHPcalculation.getInstance();
 
     @Override
-    public double[] subCriteriaImplementation(double criteria, PriorityData[] priorityData, int numberOfBooks) {
-        return new double[0];
+    public double[] subCriteriaImplementation(double criteriaValue, PriorityData[] priorityData, int numberOfBooks) {
+        AHPcalculation ahPcalculation = new AHPcalculation();
+        AHPSubCriteriaProcess ahpSubCriteriaProcess = new AHPSubCriteriaProcess();
+        int matrixSize=5;
+       double[] criteriaCount = ahpSubCriteriaProcess.timeCriteriaCalculationMethods(priorityData, numberOfBooks);
+        return ahPcalculation.subCriteriaCalculationAnalyticalHierarchyProcess(matrixSize,criteriaCount,criteriaValue);
+
     }
 }

@@ -8,6 +8,6 @@ public class OldestTimeCriteria implements  TimeCriteriaMatcher {
 
     @Override
     public int getBorrowClassIndex() {
-        return 0;
+        return 4;
     }
 }

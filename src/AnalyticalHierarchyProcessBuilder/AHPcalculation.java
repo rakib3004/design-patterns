@@ -2,6 +2,14 @@ package AnalyticalHierarchyProcessBuilder;
 
 
 public class AHPcalculation {
+
+    private static AHPcalculation ahPcalculation = new AHPcalculation();
+
+
+
+    public static AHPcalculation getInstance(){
+        return ahPcalculation;
+    }
     AHPcriteriaWeight ahPcriteriaWeight;
 
     AHPcriteriaWeight [] ahpWeight= new AHPcriteriaWeight[4];
