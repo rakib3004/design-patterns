@@ -8,56 +8,56 @@ public class AHPSubCriteriaProcess {
 
 
     public double[] borrowCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
-        int[] countCounter = new int[4];
-        double[] parsingCountCounter = new double[4];
+        int[] borrowCounter = new int[4];
+        double[] parsingBorrowCounter = new double[4];
 
         // count number of books on each type of purchase category in AHP Calculation
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].getBorrowPriority() <= 10) {
-                countCounter[3]++;
+                borrowCounter[3]++;
             } else if (priorityData[iterator].getBorrowPriority() <= 20) {
-                countCounter[2]++;
+                borrowCounter[2]++;
             } else if (priorityData[iterator].getBorrowPriority() <= 30) {
-                countCounter[1]++;
+                borrowCounter[1]++;
             } else if (priorityData[iterator].getBorrowPriority() <= 40) {
-                countCounter[0]++;
+                borrowCounter[0]++;
             }
         }
 
         for (iterator = 0; iterator < 4; iterator++) {
-            parsingCountCounter[iterator] = Double.parseDouble(String.valueOf(countCounter[iterator]));
+            parsingBorrowCounter[iterator] = Double.parseDouble(String.valueOf(borrowCounter[iterator]));
         }
 
-        return parsingCountCounter;
+        return parsingBorrowCounter;
     }
 
     public double[] timeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
-        int[] monthCounter = new int[5];
-        double[] parsingMonthCounter = new double[5];
+        int[] timeCounter = new int[5];
+        double[] parsingTimeCounter = new double[5];
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].getTimePriority() <= 5.60) {
-                monthCounter[4]++;
+                timeCounter[4]++;
 
             } else if (priorityData[iterator].getTimePriority() <= 7.20) {
-                monthCounter[3]++;
+                timeCounter[3]++;
 
             } else if (priorityData[iterator].getTimePriority() <= 9.50) {
-                monthCounter[2]++;
+                timeCounter[2]++;
 
             } else if (priorityData[iterator].getTimePriority() <= 12.00) {
-                monthCounter[1]++;
+                timeCounter[1]++;
 
             } else if (priorityData[iterator].getTimePriority() <= 14.00) {
-                monthCounter[0]++;
+                timeCounter[0]++;
             }
         }
 
         for (iterator = 0; iterator < 5; iterator++) {
-            parsingMonthCounter[iterator] = Double.parseDouble(String.valueOf(monthCounter[iterator]));
+            parsingTimeCounter[iterator] = Double.parseDouble(String.valueOf(timeCounter[iterator]));
         }
-        return parsingMonthCounter;
+        return parsingTimeCounter;
     }
 
     public double[] typeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
