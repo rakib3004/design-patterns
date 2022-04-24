@@ -65,6 +65,9 @@ public class PriceCriteriaAHP {
 
         }
 
+       // ahPcriteriaWeight = new AHPcriteriaWeight(priceWeightMatrix);
+
+
 
         return ahPcriteriaWeight;
     }

@@ -27,15 +27,13 @@ public class AHPcriteriaWeight {
     public AHPcriteriaWeight() {
     }
 
-    public AHPcriteriaWeight(double uponnashType, double kobitaType,
-            double scienceFictionType, double kisorUponnashType,
-            double religionType, double othersType) {
-        this.uponnashType = uponnashType;
-        this.kobitaType = kobitaType;
-        this.scienceFictionType = scienceFictionType;
-        this.kisorUponnashType = kisorUponnashType;
-        this.religionType = religionType;
-        this.othersType = othersType;
+    public AHPcriteriaWeight(double [] typeWeightMatrix) {
+        this.uponnashType = typeWeightMatrix[0];
+        this.kobitaType = typeWeightMatrix[1];
+        this.scienceFictionType = typeWeightMatrix[2];
+        this.kisorUponnashType = typeWeightMatrix[3];
+        this.religionType = typeWeightMatrix[4];
+        this.othersType = typeWeightMatrix[5];
     }
 
     public AHPcriteriaWeight(double lowPrice, double mediumPrice, double highPrice) {

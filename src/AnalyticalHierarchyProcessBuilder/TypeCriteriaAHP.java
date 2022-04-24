@@ -15,20 +15,14 @@ public class TypeCriteriaAHP {
 
         for (iterator = 0; iterator < 6; iterator++) {
             for (jterator = iterator + 1; jterator < 6; jterator++) {
-                typeCriteriaAHPMatrix[iterator][jterator] = typeCounter[iterator] / typeCounter[jterator];
+                typeCriteriaAHPMatrix[iterator][jterator] = Math.pow(typeCounter[iterator] / typeCounter[jterator], -1);
             }
         }
 
-
-        for (iterator = 0; iterator < 6; iterator++) {
-            for (jterator = iterator + 1; jterator < 6; jterator++) {
-                typeCriteriaAHPMatrix[jterator][iterator] = Math.pow(typeCriteriaAHPMatrix[iterator][jterator], -1);
-            }
-        }
         for (iterator = 0; iterator < 6; iterator++) {
             typeCriteriaAHPMatrix[iterator][iterator] = (1);
-
         }
+
         double[] summationMatrix = new double[6];
 
         for (iterator = 0; iterator < 6; iterator++) {
@@ -56,9 +50,7 @@ public class TypeCriteriaAHP {
 
             typeWeightMatrix[iterator] = typeWeightMatrix[iterator] * criteria;
         }
-        ahPcriteriaWeight = new AHPcriteriaWeight(typeWeightMatrix[0],
-                typeWeightMatrix[1], typeWeightMatrix[2], typeWeightMatrix[3], typeWeightMatrix[4],
-                typeWeightMatrix[5]);
+        ahPcriteriaWeight = new AHPcriteriaWeight(typeWeightMatrix);
 
 
 
