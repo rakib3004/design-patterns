@@ -12,7 +12,7 @@ public class CountCriteriaAHP {
     AHPcalculation ahPcalculation = new AHPcalculation();
         countCounter = ahpSubCriteriaProcess.countCriteriaCalculationMethods(priorityData, numberOfBooks);
 
-       double [] countWeightMatrix = ahPcalculation.matrixCalculationAnalyticalHierarchyProcess(4,countCounter,criteria)
+       double [] countWeightMatrix = ahPcalculation.matrixCalculationAnalyticalHierarchyProcess(4,countCounter,criteria);
 
         AHPcriteriaWeight  ahPcriteriaWeight = new AHPcriteriaWeight(countWeightMatrix[0], countWeightMatrix[1], countWeightMatrix[2],
                 countWeightMatrix[3]);
