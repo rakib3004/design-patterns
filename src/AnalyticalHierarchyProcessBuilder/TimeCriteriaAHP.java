@@ -11,7 +11,7 @@ public class TimeCriteriaAHP {
         AHPcalculation ahPcalculation = new AHPcalculation();
 
         monthCounter = ahpSubCriteriaProcess.timeCriteriaCalculationMethods(priorityData, numberOfBooks);
-        double [] timeWeightMatrix = ahPcalculation.matrixCalculationAnalyticalHierarchyProcess(5,monthCounter,criteria);
+        double [] timeWeightMatrix = ahPcalculation.subCriteriaCalculationAnalyticalHierarchyProcess(5,monthCounter,criteria);
 
 
 

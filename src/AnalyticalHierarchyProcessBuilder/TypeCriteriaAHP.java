@@ -10,7 +10,7 @@ public class TypeCriteriaAHP {
         AHPcalculation ahPcalculation = new AHPcalculation();
 
         typeCounter = ahpSubCriteriaProcess.typeCriteriaCalculationMethods(priorityData, numberOfBooks);
-        double [] typeWeightMatrix = ahPcalculation.matrixCalculationAnalyticalHierarchyProcess(3,typeCounter,criteria);
+        double [] typeWeightMatrix = ahPcalculation.subCriteriaCalculationAnalyticalHierarchyProcess(3,typeCounter,criteria);
 
 
         return typeWeightMatrix;

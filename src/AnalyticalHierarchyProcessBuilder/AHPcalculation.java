@@ -9,59 +9,44 @@ public class AHPcalculation {
     CountCriteriaAHP countCriteriaAHP = new CountCriteriaAHP();
     TimeCriteriaAHP timeCriteriaAHP = new TimeCriteriaAHP();
 
-    public AHPcriteriaWeight AHPcalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
+    public AHPcriteriaWeight criteriaCalculationAnalyticalHierarchyProcess(PriorityData[] priorityData, int numberOfBooks) {
 
 
-        double[][] AHPMatrix = new double[4][4];
+        double[][] AHPMatrix = new double[3][3];
 
         int i, j;
 
         AHPMatrix[0][1] = 2.0;
         AHPMatrix[0][2] = 3.0;
-        AHPMatrix[0][3] = 5.0;
+        AHPMatrix[0][2] = 5.0;
         AHPMatrix[1][2] = 2.0;
-        AHPMatrix[1][3] = 4.0;
-        AHPMatrix[2][3] = 1.5;
+        AHPMatrix[1][2] = 4.0;
+        AHPMatrix[2][2] = 1.5;
+        double[] summationMatrix = new double[3];
+        double[] weightMatrix = new double[3];
 
-        for (i = 0; i < 4; i++) {
-            for (j = i + 1; j < 4; j++) {
-                AHPMatrix[i][j] = Math.abs(AHPMatrix[i][j]);
-            }
-        }
-        for (i = 0; i < 4; i++) {
-            for (j = i + 1; j < 4; j++) {
 
-                AHPMatrix[j][i] = Math.pow(AHPMatrix[i][j], -1);
-            }
-        }
-        for (i = 0; i < 4; i++) {
+        for (i = 0; i < 3; i++) {
             AHPMatrix[i][i] = (1);
         }
-        double[] summationMatrix = new double[4];
 
-        for (i = 0; i < 4; i++) {
-            for (j = 0; j < 4; j++) {
-
+        for (i = 0; i < 3; i++) {
+            for (j = i + 1; j < 3; j++) {
+                AHPMatrix[i][j] = Math.pow(AHPMatrix[i][j], -1);
                 summationMatrix[i] = summationMatrix[i] + AHPMatrix[i][j];
             }
         }
 
-        for (i = 0; i < 4; i++) {
-            for (j = 0; j < 4; j++) {
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
 
                 AHPMatrix[i][j] = AHPMatrix[i][j] / summationMatrix[i];
-            }
-        }
-        double[] weightMatrix = new double[4];
-
-        for (i = 0; i < 4; i++) {
-            for (j = 0; j < 4; j++) {
-
                 weightMatrix[i] = weightMatrix[i] + AHPMatrix[j][i];
-
             }
-            weightMatrix[i] = weightMatrix[i] / 4;
+            weightMatrix[i] = weightMatrix[i] / 3;
         }
+
+
 
         double [] countMatrix, timeMatrix, typeMatrix;
 
@@ -75,27 +60,22 @@ public class AHPcalculation {
 
     }
 
-    public double [] matrixCalculationAnalyticalHierarchyProcess(int matrixSize, double [] criteriaMatrix, double criteria){
+    public double [] subCriteriaCalculationAnalyticalHierarchyProcess(int matrixSize, double [] criteriaMatrix, double criteria){
         int iterator,jterator;
         double[][] criteriaAHPMatrix = new double[matrixSize][matrixSize];
+        double[] summationMatrix = new double[matrixSize];
+
+        double[] criteriaWeightMatrix = new double[matrixSize];
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            criteriaAHPMatrix[iterator][iterator] = (1);
+        }
 
 
         for (iterator = 0; iterator < matrixSize; iterator++) {
             for (jterator = iterator + 1; jterator < matrixSize; jterator++) {
                 criteriaAHPMatrix[iterator][jterator] = Math.pow(criteriaMatrix[iterator] / criteriaMatrix[jterator],-1);
-            }
-        }
-
-
-
-        for (iterator = 0; iterator < matrixSize; iterator++) {
-            criteriaAHPMatrix[iterator][iterator] = (1);
-        }
-
-        double[] summationMatrix = new double[matrixSize];
-        for (iterator = 0; iterator < matrixSize; iterator++) {
-            for (jterator = 0; jterator < matrixSize; jterator++) {
                 summationMatrix[iterator] = summationMatrix[iterator] + criteriaAHPMatrix[iterator][jterator];
+
             }
         }
 
@@ -103,19 +83,14 @@ public class AHPcalculation {
             for (jterator = 0; jterator < matrixSize; jterator++) {
                 criteriaAHPMatrix[iterator][jterator] = criteriaAHPMatrix[iterator][jterator]
                         / summationMatrix[iterator];
-            }
-        }
-        double[] criteriaWeightMatrix = new double[matrixSize];
-
-        for (iterator = 0; iterator < matrixSize; iterator++) {
-            for (jterator = 0; jterator < matrixSize; jterator++) {
                 criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] + criteriaAHPMatrix[jterator][iterator];
 
             }
             criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] / matrixSize;
-        }
-        for (iterator = 0; iterator < matrixSize; iterator++) {
 
+        }
+
+        for (iterator = 0; iterator < matrixSize; iterator++) {
             criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] * criteria;
         }
 
