@@ -1,5 +1,6 @@
 package AnalyticalHierarchyProcessBuilder;
 
 public interface SubCriteriaAHP {
-public double [] subCriteriaImplementation(int matrixSize, double criteriaCount, double criteriaValue);
+public double [] subCriteriaImplementation(double criteria, PriorityData[] priorityData, int numberOfBooks);
+
 }
