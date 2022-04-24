@@ -68,14 +68,7 @@ public class AHPcalculation {
         ahpWeight[1] = countCriteriaAHP.countCriteriaAHPMethods(weightMatrix[1], priorityData, numberOfBooks);
         ahpWeight[2]= monthCriteriaAHP.monthCriteriaAHPMethods(weightMatrix[2], priorityData, numberOfBooks);
 
-        ahPcriteriaWeight = new AHPcriteriaWeight( ahpWeight[1].getHighlyDemand(),
-                ahpWeight[1].getHighMediumDemand(), ahpWeight[1].getLowMediumDemand(),
-                ahpWeight[1].getLowlyDemand(), ahpWeight[2].getLatestBook(),
-                ahpWeight[2].getNewlyBook(), ahpWeight[2].getRecentlyOldBook(), ahpWeight[2].getOldBook(),
-                ahpWeight[2].getOldestBook(),
-                ahpWeight[3].getUponnashType(), ahpWeight[3].getKisorUponnashType(),
-                ahpWeight[3].getScienceFictionType(), ahpWeight[3].getScienceFictionType(),
-                ahpWeight[3].getKisorUponnashType(), ahpWeight[3].getOthersType());
+        ahPcriteriaWeight = new AHPcriteriaWeight(ahpWeight,ahpWeight,ahpWeight);
 
         return ahPcriteriaWeight;
 

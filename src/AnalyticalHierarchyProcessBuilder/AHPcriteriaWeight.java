@@ -16,63 +16,28 @@ public class AHPcriteriaWeight {
     private double oldestBook;
 
     private double uponnashType;
-    private double kobitaType;
     private double scienceFictionType;
-    private double kisorUponnashType;
     private double religionType;
-    private double othersType;
 
     public AHPcriteriaWeight() {
     }
 
-    public AHPcriteriaWeight(double [] typeWeightMatrix) {
-        this.uponnashType = typeWeightMatrix[0];
-        this.kobitaType = typeWeightMatrix[1];
-        this.scienceFictionType = typeWeightMatrix[2];
-        this.kisorUponnashType = typeWeightMatrix[3];
-        this.religionType = typeWeightMatrix[4];
-        this.othersType = typeWeightMatrix[5];
-    }
 
 
+    public AHPcriteriaWeight( double[] countModule, double [] timeModule, double [] typeModule) {
 
-    public AHPcriteriaWeight(double latestBook, double newlyBook, double recentlyOldBook, double oldBook,
-            double oldestBook) {
-        this.latestBook = latestBook;
-        this.newlyBook = newlyBook;
-        this.recentlyOldBook = recentlyOldBook;
-        this.oldBook = oldBook;
-        this.oldestBook = oldestBook;
-    }
+        this.lowlyDemand = countModule[0];
+        this.lowMediumDemand = countModule[1];
+        this.highMediumDemand = countModule[2];
+        this.highlyDemand = countModule[3];
+        this.latestBook = timeModule[0];
+        this.newlyBook = timeModule[1];
+        this.recentlyOldBook = timeModule[2];
+        this.oldBook = timeModule[3];
+        this.uponnashType = typeModule[0];
+        this.scienceFictionType = typeModule[1];
+        this.religionType = typeModule[2];
 
-    public AHPcriteriaWeight(double lowlyDemand, double lowMediumDemand, double highMediumDemand, double highlyDemand) {
-        this.lowlyDemand = lowlyDemand;
-        this.lowMediumDemand = lowMediumDemand;
-        this.highMediumDemand = highMediumDemand;
-        this.highlyDemand = highlyDemand;
-    }
-
-    public AHPcriteriaWeight( double highlyDemand,
-            double highMediumDemand, double lowMediumDemand, double lowlyDemand,
-            double latestBook, double newlyBook, double recentlyOldBook, double oldBook,
-            double oldestBook, double uponnashType, double kobitaType, double scienceFictionType,
-            double religionType, double kisorUponnashType, double othersType) {
-
-        this.lowlyDemand = lowlyDemand;
-        this.lowMediumDemand = lowMediumDemand;
-        this.highMediumDemand = highMediumDemand;
-        this.highlyDemand = highlyDemand;
-        this.latestBook = latestBook;
-        this.newlyBook = newlyBook;
-        this.recentlyOldBook = recentlyOldBook;
-        this.oldBook = oldBook;
-        this.oldestBook = oldestBook;
-        this.uponnashType = uponnashType;
-        this.kobitaType = kobitaType;
-        this.scienceFictionType = scienceFictionType;
-        this.religionType = religionType;
-        this.kisorUponnashType = kisorUponnashType;
-        this.othersType = othersType;
     }
 
 
@@ -157,13 +122,6 @@ public class AHPcriteriaWeight {
         this.uponnashType = uponnashType;
     }
 
-    public double getKobitaType() {
-        return kobitaType;
-    }
-
-    public void setKobitaType(double kobitaType) {
-        this.kobitaType = kobitaType;
-    }
 
     public double getScienceFictionType() {
         return scienceFictionType;
@@ -181,20 +139,6 @@ public class AHPcriteriaWeight {
         this.religionType = religionType;
     }
 
-    public double getKisorUponnashType() {
-        return kisorUponnashType;
-    }
 
-    public void setKisorUponnashType(double kisorUponnashType) {
-        this.kisorUponnashType = kisorUponnashType;
-    }
-
-    public double getOthersType() {
-        return othersType;
-    }
-
-    public void setOthersType(double othersType) {
-        this.othersType = othersType;
-    }
 
 }
