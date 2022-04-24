@@ -18,10 +18,15 @@ public class AHPcriteriaWeight {
     public double oldestBook;
 
     public double uponnashType;
-    public double kobitaType;
     public double scienceFictionType;
-    public double kisorUponnashType;
     public double religionType;
+
+
+
+
+
+    public double kobitaType;
+    public double kisorUponnashType;
     public double othersType;
 
     public AHPcriteriaWeight() {

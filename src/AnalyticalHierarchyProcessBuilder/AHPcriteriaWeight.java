@@ -2,8 +2,6 @@ package AnalyticalHierarchyProcessBuilder;
 
 public class AHPcriteriaWeight {
 
-
-
     private double highlyDemand;
     private double highMediumDemand;
     private double lowMediumDemand;
@@ -18,6 +16,8 @@ public class AHPcriteriaWeight {
     private double uponnashType;
     private double scienceFictionType;
     private double religionType;
+
+
 
     public AHPcriteriaWeight() {
     }

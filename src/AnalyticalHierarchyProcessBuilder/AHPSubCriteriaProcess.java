@@ -12,6 +12,7 @@ public class AHPSubCriteriaProcess {
     public static AHPSubCriteriaProcess getInstance(){
         return ahpSubCriteriaProcess;
     }
+
     public  AHPSubCriteriaProcess() {
     }
     List<BorrowCriteriaMatcher> borrowCriteriaMatchers;

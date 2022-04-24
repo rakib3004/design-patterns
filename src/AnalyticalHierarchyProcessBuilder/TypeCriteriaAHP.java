@@ -2,12 +2,12 @@ package AnalyticalHierarchyProcessBuilder;
 
 
 public class TypeCriteriaAHP {
-    AHPSubCriteriaProcess ahpSubCriteriaProcess = new AHPSubCriteriaProcess();
-    double[] typeCounter = new double[3];
+   private AHPSubCriteriaProcess ahpSubCriteriaProcess =  AHPSubCriteriaProcess.getInstance();
+   private double[] typeCounter = new double[3];
 
     public double [] typeCriteriaAHPMethods(double criteria, PriorityData[] priorityData, int numberOfBooks) {
 
-        AHPcalculation ahPcalculation = new AHPcalculation();
+        AHPcalculation ahPcalculation =  AHPcalculation.getInstance();
 
         typeCounter = ahpSubCriteriaProcess.typeCriteriaCalculationMethods(priorityData, numberOfBooks);
         double [] typeWeightMatrix = ahPcalculation.subCriteriaCalculationAnalyticalHierarchyProcess(3,typeCounter,criteria);
