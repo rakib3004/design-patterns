@@ -2,9 +2,7 @@ package AnalyticalHierarchyProcessBuilder;
 
 public class AHPcriteriaWeight {
 
-    private double lowPrice;
-    private double mediumPrice;
-    private double highPrice;
+
 
     private double highlyDemand;
     private double highMediumDemand;
@@ -36,11 +34,7 @@ public class AHPcriteriaWeight {
         this.othersType = typeWeightMatrix[5];
     }
 
-    public AHPcriteriaWeight(double lowPrice, double mediumPrice, double highPrice) {
-        this.lowPrice = lowPrice;
-        this.mediumPrice = mediumPrice;
-        this.highPrice = highPrice;
-    }
+
 
     public AHPcriteriaWeight(double latestBook, double newlyBook, double recentlyOldBook, double oldBook,
             double oldestBook) {
@@ -58,14 +52,12 @@ public class AHPcriteriaWeight {
         this.highlyDemand = highlyDemand;
     }
 
-    public AHPcriteriaWeight(double highPrice, double mediumPrice, double lowPrice, double highlyDemand,
+    public AHPcriteriaWeight( double highlyDemand,
             double highMediumDemand, double lowMediumDemand, double lowlyDemand,
             double latestBook, double newlyBook, double recentlyOldBook, double oldBook,
             double oldestBook, double uponnashType, double kobitaType, double scienceFictionType,
             double religionType, double kisorUponnashType, double othersType) {
-        this.highPrice = highPrice;
-        this.lowPrice = lowPrice;
-        this.mediumPrice = mediumPrice;
+
         this.lowlyDemand = lowlyDemand;
         this.lowMediumDemand = lowMediumDemand;
         this.highMediumDemand = highMediumDemand;
@@ -83,29 +75,7 @@ public class AHPcriteriaWeight {
         this.othersType = othersType;
     }
 
-    public double getHighPrice() {
-        return highPrice;
-    }
 
-    public void setHighPrice(double highPrice) {
-        this.highPrice = highPrice;
-    }
-
-    public double getLowPrice() {
-        return lowPrice;
-    }
-
-    public void setLowPrice(double lowPrice) {
-        this.lowPrice = lowPrice;
-    }
-
-    public double getMediumPrice() {
-        return mediumPrice;
-    }
-
-    public void setMediumPrice(double mediumPrice) {
-        this.mediumPrice = mediumPrice;
-    }
 
     public double getLowlyDemand() {
         return lowlyDemand;
