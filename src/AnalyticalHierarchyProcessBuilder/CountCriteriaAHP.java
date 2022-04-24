@@ -19,12 +19,7 @@ public class CountCriteriaAHP {
             }
         }
 
-        countCriteriaAHPMatrix[0][1] = 1.5;
-        countCriteriaAHPMatrix[0][2] = 7.5;
-        countCriteriaAHPMatrix[0][3] = 11.0;
-        countCriteriaAHPMatrix[1][2] = 2.5;
-        countCriteriaAHPMatrix[1][3] = 7.0;
-        countCriteriaAHPMatrix[2][3] = 3.0;
+
 
         for (iterator = 0; iterator < 4; iterator++) {
             for (jterator = iterator + 1; jterator < 4; jterator++) {

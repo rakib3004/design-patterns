@@ -19,9 +19,6 @@ public class PriceCriteriaAHP {
                 priceCriteriaAHPMatrix[iterator][jterator] = priceCounter[iterator] / priceCounter[jterator];
             }
         }
-        // new methodology for analytical hierarchy process to calculate sub criteria by
-        // issuing book by category
-        // add new methodology for analytical hierarchy process
         priceCriteriaAHPMatrix[0][1] = 3.0;
         priceCriteriaAHPMatrix[0][2] = 5.0;
         priceCriteriaAHPMatrix[1][2] = 5.0 / 3.0;
