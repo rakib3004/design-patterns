@@ -83,4 +83,51 @@ public class AHPcalculation {
         return ahPcriteriaWeight;
 
     }
+
+    public double [] matrixCalculationAnalyticalHierarchyProcess(int matrixSize, double [] criteriaMatrix, double criteria){
+        int iterator,jterator;
+        double[][] criteriaAHPMatrix = new double[matrixSize][matrixSize];
+
+
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            for (jterator = iterator + 1; jterator < matrixSize; jterator++) {
+                criteriaAHPMatrix[iterator][jterator] = Math.pow(criteriaMatrix[iterator] / criteriaMatrix[jterator],-1);
+            }
+        }
+
+
+
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            criteriaAHPMatrix[iterator][iterator] = (1);
+        }
+
+        double[] summationMatrix = new double[matrixSize];
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            for (jterator = 0; jterator < matrixSize; jterator++) {
+                summationMatrix[iterator] = summationMatrix[iterator] + criteriaAHPMatrix[iterator][jterator];
+            }
+        }
+
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            for (jterator = 0; jterator < matrixSize; jterator++) {
+                criteriaAHPMatrix[iterator][jterator] = criteriaAHPMatrix[iterator][jterator]
+                        / summationMatrix[iterator];
+            }
+        }
+        double[] criteriaWeightMatrix = new double[matrixSize];
+
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+            for (jterator = 0; jterator < matrixSize; jterator++) {
+                criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] + criteriaAHPMatrix[jterator][iterator];
+
+            }
+            criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] / matrixSize;
+        }
+        for (iterator = 0; iterator < matrixSize; iterator++) {
+
+            criteriaWeightMatrix[iterator] = criteriaWeightMatrix[iterator] * criteria;
+        }
+
+        return  criteriaWeightMatrix;
+    }
 }
