@@ -8,6 +8,6 @@ public class LowMediumBorrowCriteria implements  BorrowCriteriaMatcher{
 
     @Override
     public int getBorrowClassIndex() {
-        return 0;
+        return 2;
     }
 }

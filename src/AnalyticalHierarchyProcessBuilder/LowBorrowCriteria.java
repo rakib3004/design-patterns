@@ -9,6 +9,6 @@ public class LowBorrowCriteria implements BorrowCriteriaMatcher {
 
     @Override
     public int getBorrowClassIndex() {
-        return 0;
+        return 3;
     }
 }

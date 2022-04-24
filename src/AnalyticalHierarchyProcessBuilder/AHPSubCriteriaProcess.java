@@ -1,9 +1,22 @@
 package AnalyticalHierarchyProcessBuilder;
 
 
+import java.util.List;
+
 public class AHPSubCriteriaProcess {
 
     int iterator;
+
+
+    List<BorrowCriteriaMatcher> borrowCriteriaMatchers;
+    public  AHPSubCriteriaProcess(List<BorrowCriteriaMatcher> borrowCriteriaMatchers) {
+    super();
+    this.borrowCriteriaMatchers=borrowCriteriaMatchers;
+    }
+
+    public AHPSubCriteriaProcess() {
+    }
+
 
 
 
@@ -13,15 +26,13 @@ public class AHPSubCriteriaProcess {
 
         // count number of books on each type of purchase category in AHP Calculation
 
+
+int index=0;
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (priorityData[iterator].getBorrowPriority() <= 10) {
-                borrowCounter[3]++;
-            } else if (priorityData[iterator].getBorrowPriority() <= 20) {
-                borrowCounter[2]++;
-            } else if (priorityData[iterator].getBorrowPriority() <= 30) {
-                borrowCounter[1]++;
-            } else if (priorityData[iterator].getBorrowPriority() <= 40) {
-                borrowCounter[0]++;
+            for (BorrowCriteriaMatcher borrowCriteriaMatcher: borrowCriteriaMatchers){
+                if(borrowCriteriaMatcher.compareBorrowCount(priorityData[iterator].getBorrowPriority()))
+                    index=borrowCriteriaMatcher.getBorrowClassIndex();
+                     borrowCounter[index]++;
             }
         }
 
