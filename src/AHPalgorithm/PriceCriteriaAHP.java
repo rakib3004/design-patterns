@@ -7,8 +7,6 @@ public class PriceCriteriaAHP {
 
     public AHPcriteriaWeight priceCriteriaAHPMethods(double criteria, PriorityData[] priorityData, int numberOfBooks) {
 
-
-
         double[][] priceCriteriaAHPMatrix = new double[3][3];
 
         int iterator, jterator;
@@ -19,9 +17,6 @@ public class PriceCriteriaAHP {
                 priceCriteriaAHPMatrix[iterator][jterator] = priceCounter[iterator] / priceCounter[jterator];
             }
         }
-        // new methodology for analytical hierarchy process to calculate sub criteria by
-        // issuing book by category
-        // add new methodology for analytical hierarchy process
         priceCriteriaAHPMatrix[0][1] = 3.0;
         priceCriteriaAHPMatrix[0][2] = 5.0;
         priceCriteriaAHPMatrix[1][2] = 5.0 / 3.0;
@@ -32,7 +27,6 @@ public class PriceCriteriaAHP {
             }
         }
         for (iterator = 0; iterator < 3; iterator++) {
-
             priceCriteriaAHPMatrix[iterator][iterator] = 1.00;
         }
 
@@ -67,7 +61,6 @@ public class PriceCriteriaAHP {
             priceWeightMatrix[iterator] = priceWeightMatrix[iterator] * criteria;
 
         }
-
 
         return ahPcriteriaWeight;
     }

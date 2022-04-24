@@ -27,11 +27,10 @@ public class AHPSubCriteriaProcess {
     public double[] borrowCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] borrowCounter = new int[4];
         double[] parsingBorrowCounter = new double[4];
-
-        // count number of books on each type of purchase category in AHP Calculation
-
-
         int index=0;
+
+
+
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             for (BorrowCriteriaMatcher borrowCriteriaMatcher: borrowCriteriaMatchers){
                 if(borrowCriteriaMatcher.compareBorrowCount(priorityData[iterator].getBorrowPriority()))

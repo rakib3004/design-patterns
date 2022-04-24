@@ -60,8 +60,7 @@ public class AHPSubCriteriaProcess {
         int[] monthCounter = new int[5];
         double[] parsingMonthCounter = new double[5];
 
-        // count number of books on each type of date of issue category in AHP
-        // Calculation
+
 
         for (iterator = 0; iterator < numberOfBooks; iterator++) {
             if (priorityData[iterator].timePriority <= 5.60) {

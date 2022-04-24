@@ -11,19 +11,15 @@ public class AHPprocessImplementation {
 
         int iterator1;
 
-        // set AHP Priority according to there borrow priority
 
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
             if (priorityData[iterator1].borrowPriority <= 10) {
-                // System.out.println(iterator1 + ":::: 10 er niche");
 
                 priorityData[iterator1].borrowPriority = ahPcriteriaWeight.lowlyDemand;
             } else if (priorityData[iterator1].borrowPriority <= 20) {
-                // System.out.println(iterator1 + ":::: 20 er niche");
 
                 priorityData[iterator1].borrowPriority = ahPcriteriaWeight.lowMediumDemand;
             } else if (priorityData[iterator1].borrowPriority <= 30) {
-                // System.out.println(iterator1 + ":::: 30 er niche");
 
                 priorityData[iterator1].borrowPriority = ahPcriteriaWeight.highMediumDemand;
             } else if (priorityData[iterator1].borrowPriority <= 40) {
@@ -32,7 +28,7 @@ public class AHPprocessImplementation {
             }
         }
 
-        // set AHP Priority according to there type priority
+
 
         for (iterator1 = 0; iterator1 < numberOfBooks; iterator1++) {
             if (priorityData[iterator1].bookId.substring(0, 2).equals("01")) {
