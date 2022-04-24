@@ -2,8 +2,8 @@ package AnalyticalHierarchyProcessBuilder;
 
 public class HighBorrowCriteria implements  BorrowCriteriaMatcher{
     @Override
-    public boolean compareBorrowCount() {
-        return false;
+    public boolean compareBorrowCount(double borrowPriority) {
+        return borrowPriority<=40;
     }
 
     @Override
