@@ -5,29 +5,7 @@ public class AHPSubCriteriaProcess {
 
     int iterator;
 
-    public double[] priceCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
 
-        int[] priceCounter = new int[3];
-        double[] parsingPriceCounter = new double[3];
-
-        priceCounter[0] = 1;
-        priceCounter[1] = 1;
-        priceCounter[2] = 1;
-        for (iterator = 0; iterator < numberOfBooks; iterator++) {
-            if (Integer.parseInt(priorityData[iterator].getBookPrice()) <= 180) {
-                priceCounter[0]++;
-            } else if (Integer.parseInt(priorityData[iterator].getBookPrice()) <= 250) {
-                priceCounter[1]++;
-            } else {
-                priceCounter[2]++;
-            }
-        }
-
-        for (iterator = 0; iterator < 3; iterator++) {
-            parsingPriceCounter[iterator] = Double.parseDouble(String.valueOf(priceCounter[iterator]));
-        }
-        return parsingPriceCounter;
-    }
 
     public double[] countCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] countCounter = new int[4];
@@ -54,7 +32,7 @@ public class AHPSubCriteriaProcess {
         return parsingCountCounter;
     }
 
-    public double[] monthCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
+    public double[] timeCriteriaCalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
         int[] monthCounter = new int[5];
         double[] parsingMonthCounter = new double[5];
 

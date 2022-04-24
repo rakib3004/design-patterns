@@ -7,7 +7,7 @@ public class AHPcalculation {
     AHPcriteriaWeight [] ahpWeight= new AHPcriteriaWeight[4];
     TypeCriteriaAHP typeCriteriaAHP = new TypeCriteriaAHP();
     CountCriteriaAHP countCriteriaAHP = new CountCriteriaAHP();
-    MonthCriteriaAHP monthCriteriaAHP = new MonthCriteriaAHP();
+    TimeCriteriaAHP timeCriteriaAHP = new TimeCriteriaAHP();
 
     public AHPcriteriaWeight AHPcalculationMethods(PriorityData[] priorityData, int numberOfBooks) {
 
@@ -63,12 +63,13 @@ public class AHPcalculation {
             weightMatrix[i] = weightMatrix[i] / 4;
         }
 
+        double [] countMatrix, timeMatrix, typeMatrix;
 
-        ahpWeight[3] = typeCriteriaAHP.typeCriteriaAHPMethods(weightMatrix[0], priorityData, numberOfBooks);
-        ahpWeight[1] = countCriteriaAHP.countCriteriaAHPMethods(weightMatrix[1], priorityData, numberOfBooks);
-        ahpWeight[2]= monthCriteriaAHP.monthCriteriaAHPMethods(weightMatrix[2], priorityData, numberOfBooks);
+        countMatrix = typeCriteriaAHP.typeCriteriaAHPMethods(weightMatrix[0], priorityData, numberOfBooks);
+        timeMatrix = countCriteriaAHP.countCriteriaAHPMethods(weightMatrix[1], priorityData, numberOfBooks);
+        typeMatrix= timeCriteriaAHP.timeCriteriaAHPMethods(weightMatrix[2], priorityData, numberOfBooks);
 
-        ahPcriteriaWeight = new AHPcriteriaWeight(ahpWeight,ahpWeight,ahpWeight);
+        ahPcriteriaWeight = new AHPcriteriaWeight(countMatrix, timeMatrix, typeMatrix);
 
         return ahPcriteriaWeight;
 
