@@ -1,5 +1,5 @@
 package RefactoringGuru.AbstractFactory;
 
-public interface Button {
+public interface Checkbox {
     void paint();
 }
