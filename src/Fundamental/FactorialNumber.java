@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class FactorialNumber {
 
     public static void main(String[] args) {
-        ;
+
         int factorialResult=1;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the Number: ");
         int factorialNumber=scanner.nextInt();
-
 
         int iterator=0;
 
