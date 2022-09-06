@@ -2,7 +2,12 @@ package Fundamental;
 
 public class HashCodeGenerator {
 
-    public int getHashValue(String name, String email, String phoneNo, String regNo) {
+    public static void main(String args[]){
+
+System.out.println(getHashValue("Rakibdaf","fdsafsdfsdgdfgsd","01201202112","122121212"));
+    }
+
+    public static int getHashValue(String name, String email, String phoneNo, String regNo) {
 
         boolean hashableState = checkDataValidity(name, email, phoneNo, regNo);
 
@@ -20,7 +25,7 @@ public class HashCodeGenerator {
 
     }
 
-    public boolean checkDataValidity(String name, String email, String phoneNo, String regNo) {
+    public static boolean checkDataValidity(String name, String email, String phoneNo, String regNo) {
 
         int nameLength = name.length();
         int emailLength = email.length();
@@ -37,7 +42,7 @@ public class HashCodeGenerator {
 
     }
 
-    public String reverseAndCombinedData(String name, String email, String phoneNo, String regNo) {
+    public static String reverseAndCombinedData(String name, String email, String phoneNo, String regNo) {
 
         name = reverseString(name);
         email = reverseString(email);
@@ -48,7 +53,7 @@ public class HashCodeGenerator {
 
     }
 
-    public String reverseString(String userData) {
+    public static String reverseString(String userData) {
         String reverseData = "";
         char ch;
 
@@ -59,7 +64,7 @@ public class HashCodeGenerator {
         return reverseData;
     }
 
-    public int calculateHashValue(String information) {
+    public static int calculateHashValue(String information) {
 
         // System.out.println("Hashed value is "+information);
 
