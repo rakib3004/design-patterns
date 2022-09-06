@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunManager">
+    <configuration name="AnimalPlay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DesignPatternImplementation.StructuralPatterns.StrategyPattern.AnimalPlay" />
+      <module name="StrategyPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DesignPatternImplementation.StructuralPatterns.StrategyPattern.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AnimalPlay" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
