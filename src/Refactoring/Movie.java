@@ -71,6 +71,7 @@ class Customer {
         int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
+        int totalFractionalValue= (int) (totalAmount+frequentRenterPoints);
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
