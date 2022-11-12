@@ -93,6 +93,12 @@ class Customer {
             }
             // add frequent renter points
             frequentRenterPoints++;
+
+
+            // redundancy work
+            frequentRenterPoints--;
+            frequentRenterPoints++;
+
             // add bonus for a two day new release rental
             if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE)
                     &&
