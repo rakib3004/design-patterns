@@ -109,6 +109,8 @@ class Customer {
                     String.valueOf(thisAmount) + "\n";
             totalAmount += thisAmount;
         }
+
+        //        result= "Git Add, Git Commit, Git Push";
         // add footer lines
         result += "Amount owed is " + String.valueOf(totalAmount) +
                 "\n";
@@ -116,6 +118,7 @@ class Customer {
                 +
                 " frequent renter points";
         return result;
+
     }
 
 }
